@@ -89,6 +89,43 @@ class RippleNotify {
                 toast.style.right = '14px';
         }
 
+        const colorful = options.hasOwnProperty('colorful') ? options.colorful : false;
+
+        if (colorful) {
+            switch (type) {
+                case 'success':
+                    toast.style.backgroundColor = options.backgroundColor ?? '#ECFDF3';
+                    toast.style.color = options.color ?? '#008A2E';
+                    toast.style.borderColor = options.borderColor ?? '#D3FDE5';
+                    break;
+                case 'error':
+                    toast.style.backgroundColor = options.backgroundColor || '#FFF0F0';
+                    toast.style.color = options.color || '#E60000';
+                    toast.style.borderColor = options.borderColor || '#FFE0E1';
+                    break;
+                case 'info':
+                    toast.style.backgroundColor = options.backgroundColor || '#F0F8FF';
+                    toast.style.color = options.color || '#0973DC';
+                    toast.style.borderColor = options.borderColor || '#D3E0FD';
+                    break;
+                case 'warning':
+                    toast.style.backgroundColor = options.backgroundColor || '#FFFCF0';
+                    toast.style.color = options.color || '#DC7609';
+                    toast.style.borderColor = options.borderColor || '#FDF5D3';
+                    break;
+                default:
+                    // For other types, use default styles
+                    toast.style.backgroundColor = options.backgroundColor || '#FFFFFF';
+                    toast.style.color = options.color || '#171717';
+                    toast.style.borderColor = options.borderColor || '#EDEDED';
+            }
+        } else {
+            // For other types, use default styles
+            toast.style.backgroundColor = options.backgroundColor || '#FFFFFF';
+            toast.style.color = options.color || '#171717';
+            toast.style.borderColor = options.borderColor || '#EDEDED';
+        }
+
         document.body.appendChild(toast);
 
         setTimeout(() => {
