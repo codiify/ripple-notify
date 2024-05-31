@@ -1,38 +1,45 @@
-
 class RippleNotify {
-
-    static success(message = 'This is a success message!') {
-        this.createToast('success', message);
+    static success(message = 'This is a success message!', options = {}) {
+        this.createToast('success', message, options);
     }
 
+    static error(message = 'This is an error message!', options = {}) {
+        this.createToast('error', message, options);
+    }
 
-    static createToast(type, message) {
+    static info(message = 'This is an info message!', options = {}) {
+        this.createToast('info', message, options);
+    }
+
+    static warning(message = 'This is a warning message!', options = {}) {
+        this.createToast('warning', message, options);
+    }
+
+    static default(message = 'This is a default message!', options = {}) {
+        this.createToast('default', message, options);
+    }
+
+    static createToast(type = 'default', message, options) {
         const toast = document.createElement('div');
-        toast.className = `toast toast-${type}`;
+        toast.className = `toast toast--${type}`;
 
         const icon = document.createElement('i');
         icon.className = `toast-icon`;
-        switch(type) {
+        switch (type) {
             case 'success':
                 icon.classList.add('fas', 'fa-check-circle');
-                toast.style.backgroundColor = '#d4edda';
                 break;
             case 'error':
                 icon.classList.add('fas', 'fa-times-circle');
-                toast.style.backgroundColor = '#f8d7da';
                 break;
             case 'info':
                 icon.classList.add('fas', 'fa-info-circle');
-                toast.style.backgroundColor = '#d1ecf1';
                 break;
             case 'warning':
                 icon.classList.add('fas', 'fa-exclamation-circle');
-                toast.style.backgroundColor = '#fff3cd';
-                toast.style.color = '#212529';
                 break;
             default:
                 icon.classList.add('fas', 'fa-bell');
-                toast.style.backgroundColor = '#333';
         }
 
         const text = document.createElement('span');
@@ -41,10 +48,35 @@ class RippleNotify {
         toast.appendChild(icon);
         toast.appendChild(text);
 
+        // Set the position of the toast
+        const position = options.position || 'top-right';
+        toast.style.position = 'fixed';
+        switch (position) {
+            case 'top-left':
+                toast.style.top = '10px';
+                toast.style.left = '10px';
+                break;
+            case 'top-right':
+                toast.style.top = '10px';
+                toast.style.right = '10px';
+                break;
+            case 'bottom-left':
+                toast.style.bottom = '10px';
+                toast.style.left = '10px';
+                break;
+            case 'bottom-right':
+                toast.style.bottom = '10px';
+                toast.style.right = '10px';
+                break;
+            default:
+                toast.style.top = '10px';
+                toast.style.right = '10px';
+        }
+
         document.body.appendChild(toast);
 
         setTimeout(() => {
-            toast.style.transition = 'opacity 0.5s ease-in-out';
+            toast.style.transition = 'opacity 2s ease';
             toast.style.opacity = '0';
             setTimeout(() => toast.remove(), 500);
         }, 3000); // Remove the toast after 3 seconds
