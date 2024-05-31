@@ -3,7 +3,7 @@
     width: 310px;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
     padding: 10px 20px;
     border-radius: 5px;
@@ -53,4 +53,48 @@
 .toast-icon {
     font-size: 14px;
     margin-right: 8px;
+}
+
+@keyframes slideInRight {
+    from {
+        right: -300px;
+        opacity: 0;
+    }
+    to {
+        right: 14px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        left: -300px;
+        opacity: 0;
+    }
+    to {
+        left: 14px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 14px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInBottom {
+    from {
+        bottom: -100px;
+        opacity: 0;
+    }
+    to {
+        bottom: 14px;
+        opacity: 1;
+    }
 }

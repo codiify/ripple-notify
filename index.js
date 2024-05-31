@@ -53,24 +53,40 @@ class RippleNotify {
         toast.style.position = 'fixed';
         switch (position) {
             case 'top-left':
-                toast.style.top = '10px';
-                toast.style.left = '10px';
+                toast.style.top = '14px';
+                toast.style.left = '14px';
+                toast.style.animation = 'slideInLeft 0.5s ease-in-out';
+                break;
+            case 'top-center':
+                toast.style.top = '14px';
+                toast.style.left = '50%';
+                toast.style.transform = 'translateX(-50%)';
+                toast.style.animation = 'slideInTop 0.5s ease-in-out';
                 break;
             case 'top-right':
-                toast.style.top = '10px';
-                toast.style.right = '10px';
+                toast.style.top = '14px';
+                toast.style.right = '14px';
+                toast.style.animation = 'slideInRight 0.5s ease-in-out';
                 break;
             case 'bottom-left':
-                toast.style.bottom = '10px';
-                toast.style.left = '10px';
+                toast.style.bottom = '14px';
+                toast.style.left = '14px';
+                toast.style.animation = 'slideInLeft 0.5s ease-in-out';
+                break;
+            case 'bottom-center':
+                toast.style.bottom = '14px';
+                toast.style.left = '50%';
+                toast.style.transform = 'translateX(-50%)';
+                toast.style.animation = 'slideInBottom 0.5s ease-in-out';
                 break;
             case 'bottom-right':
-                toast.style.bottom = '10px';
-                toast.style.right = '10px';
+                toast.style.bottom = '14px';
+                toast.style.right = '14px';
+                toast.style.animation = 'slideInRight 0.5s ease-in-out';
                 break;
             default:
-                toast.style.top = '10px';
-                toast.style.right = '10px';
+                toast.style.top = '14px';
+                toast.style.right = '14px';
         }
 
         document.body.appendChild(toast);
