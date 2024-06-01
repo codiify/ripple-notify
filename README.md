@@ -1,7 +1,15 @@
 # Ripple Notify - A simple notification library
 
 [![npm version](https://img.shields.io/npm/l/ripple-notify.svg?label=%E2%9B%B1license&style=for-the-badge)](https://badge.fury.io/js/ripple-notify)
-[![License: MIT](https://img.shields.io/npm/l/react-toastify.svg?label=%F0%9F%93%9Clicense&style=for-the-badge)](https://opensource.org/licenses/MIT)
+![License: ISC](https://img.shields.io/npm/l/ripple-notify.svg?label=%F0%9F%93%9Clicense&style=for-the-badge)
+
+ISC License (ISC)
+
+[![Tweeting](https://img.shields.io/twitter/follow/codiify?style=for-the-badge&logo=x)](https://x.com/rth_rubelrana)
+[![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vpEv3HJ)
+
+
+
 
 
 RippleNotify is a sleek and efficient notification package designed to deliver subtle yet effective alerts across various digital platforms. Its intuitive design seamlessly integrates into web and mobile applications, providing unobtrusive notifications that capture user attention without disrupting workflow. Stay informed with RippleNotify's prompt and seamless communication.
@@ -108,5 +116,9 @@ You can find the release note for the latest release [here](rubelran.dev).
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
+### Author
+[![Tweeting](https://img.shields.io/twitter/follow/codiify?style=for-the-badge&logo=x)](https://x.com/rth_rubelrana)
+[![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vpEv3HJ)
 
 Optional section to credit contributors, libraries, or resources that inspired or assisted your project.
+
