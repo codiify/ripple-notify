@@ -3,7 +3,7 @@ export let ToastConfig;
 (async () => {
     // Default configuration
     ToastConfig = {
-        timeout: 33000,
+        timeout: 3000,
         animationSpeed: '0.5s',
         colors: {
             success: {
