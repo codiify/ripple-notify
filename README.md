@@ -2,9 +2,6 @@
 
 [![npm version](https://img.shields.io/npm/l/ripple-notify.svg?label=%E2%9B%B1license&style=for-the-badge)](https://badge.fury.io/js/ripple-notify)
 ![License: ISC](https://img.shields.io/npm/l/ripple-notify.svg?label=%F0%9F%93%9Clicense&style=for-the-badge)
-
-ISC License (ISC)
-
 [![Tweeting](https://img.shields.io/twitter/follow/codiify?style=for-the-badge&logo=x)](https://x.com/rth_rubelrana)
 [![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vpEv3HJ)
 
