@@ -20,36 +20,6 @@
     padding: 16px 12px;
 }
 
-/*.toast--default {*/
-/*    background-color: #FFFFFF;*/
-/*    color: #171717;*/
-/*    border-color: #EDEDED;*/
-/*}*/
-
-/*.toast--success {*/
-/*    background-color: #ECFDF3;*/
-/*    color: #008A2E;*/
-/*    border-color: #D3FDE5;*/
-/*}*/
-
-/*.toast--error {*/
-/*    background-color: #FFF0F0;*/
-/*    color: #E60000;*/
-/*    border-color: #FFE0E1;*/
-/*}*/
-
-/*.toast--info {*/
-/*    background-color: #F0F8FF;*/
-/*    color: #0973DC;*/
-/*    border-color: #D3E0FD;*/
-/*}*/
-
-/*.toast--warning {*/
-/*    background-color: #FFFCF0;*/
-/*    color: #DC7609;*/
-/*    border-color: #FDF5D3;*/
-/*}*/
-
 .toast-icon {
     font-size: 14px;
     margin-right: 8px;

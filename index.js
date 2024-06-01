@@ -1,3 +1,62 @@
+export let ToastConfig;
+
+(async () => {
+    // Default configuration
+    ToastConfig = {
+        timeout: 33000,
+        animationSpeed: '0.5s',
+        colors: {
+            success: {
+                backgroundColor: '#ECFDF3',
+                color: '#008A2E',
+                borderColor: '#D3FDE5'
+            },
+            error: {
+                backgroundColor: '#FFF0F0',
+                color: '#E60000',
+                borderColor: '#FFE0E1'
+            },
+            info: {
+                backgroundColor: '#F0F8FF',
+                color: '#0973DC',
+                borderColor: '#D3E0FD'
+            },
+            warning: {
+                backgroundColor: '#FFFCF0',
+                color: '#DC7609',
+                borderColor: '#FDF5D3'
+            },
+            default: {
+                backgroundColor: '#FFFFFF',
+                color: '#171717',
+                borderColor: '#EDEDED'
+            }
+        }
+    };
+
+    // console.log('Using default configuration:', ToastConfig);
+
+    // Specify the custom config path
+    const customConfigPath = '../../ripple.js'; // Adjust the path as needed
+
+    try {
+        // Try to import the custom config file
+        const customConfigModule = await import(customConfigPath);
+        // Merge the custom config with the default config
+        ToastConfig = {
+            ...ToastConfig,
+            ...customConfigModule.ToastConfig,
+            colors: {
+                ...ToastConfig.colors, // Preserve the default colors
+                ...customConfigModule.ToastConfig.colors // Override with custom colors
+            }
+        };
+        // console.log('Custom configuration loaded:', customConfigModule.ToastConfig);
+    } catch (e) {
+        // console.warn(`Custom configuration file not found at ${customConfigPath}. Using default configuration.`);
+    }
+})();
+
 class RippleNotify {
     static success(message = 'This is a success message!', options = {}) {
         this.createToast('success', message, options);
@@ -19,7 +78,7 @@ class RippleNotify {
         this.createToast('default', message, options);
     }
 
-    static createToast(type = 'default', message, options) {
+    static createToast(type = 'default', message, options = {}) {
         const toast = document.createElement('div');
         toast.className = `toast toast--${type}`;
 
@@ -51,38 +110,40 @@ class RippleNotify {
         // Set the position of the toast
         const position = options.position || 'top-right';
         toast.style.position = 'fixed';
+        toast.style.animationDuration = options.animationSpeed || ToastConfig.animationSpeed;
+
         switch (position) {
             case 'top-left':
                 toast.style.top = '14px';
                 toast.style.left = '14px';
-                toast.style.animation = 'slideInLeft 0.5s ease-in-out';
+                toast.style.animation = `slideInLeft ${toast.style.animationDuration} ease-in-out`;
                 break;
             case 'top-center':
                 toast.style.top = '14px';
                 toast.style.left = '50%';
                 toast.style.transform = 'translateX(-50%)';
-                toast.style.animation = 'slideInTop 0.5s ease-in-out';
+                toast.style.animation = `slideInTop ${toast.style.animationDuration} ease-in-out`;
                 break;
             case 'top-right':
                 toast.style.top = '14px';
                 toast.style.right = '14px';
-                toast.style.animation = 'slideInRight 0.5s ease-in-out';
+                toast.style.animation = `slideInRight ${toast.style.animationDuration} ease-in-out`;
                 break;
             case 'bottom-left':
                 toast.style.bottom = '14px';
                 toast.style.left = '14px';
-                toast.style.animation = 'slideInLeft 0.5s ease-in-out';
+                toast.style.animation = `slideInLeft ${toast.style.animationDuration} ease-in-out`;
                 break;
             case 'bottom-center':
                 toast.style.bottom = '14px';
                 toast.style.left = '50%';
                 toast.style.transform = 'translateX(-50%)';
-                toast.style.animation = 'slideInBottom 0.5s ease-in-out';
+                toast.style.animation = `slideInBottom ${toast.style.animationDuration} ease-in-out`;
                 break;
             case 'bottom-right':
                 toast.style.bottom = '14px';
                 toast.style.right = '14px';
-                toast.style.animation = 'slideInRight 0.5s ease-in-out';
+                toast.style.animation = `slideInRight ${toast.style.animationDuration} ease-in-out`;
                 break;
             default:
                 toast.style.top = '14px';
@@ -92,38 +153,15 @@ class RippleNotify {
         const colorful = options.hasOwnProperty('colorful') ? options.colorful : false;
 
         if (colorful) {
-            switch (type) {
-                case 'success':
-                    toast.style.backgroundColor = options.backgroundColor ?? '#ECFDF3';
-                    toast.style.color = options.color ?? '#008A2E';
-                    toast.style.borderColor = options.borderColor ?? '#D3FDE5';
-                    break;
-                case 'error':
-                    toast.style.backgroundColor = options.backgroundColor || '#FFF0F0';
-                    toast.style.color = options.color || '#E60000';
-                    toast.style.borderColor = options.borderColor || '#FFE0E1';
-                    break;
-                case 'info':
-                    toast.style.backgroundColor = options.backgroundColor || '#F0F8FF';
-                    toast.style.color = options.color || '#0973DC';
-                    toast.style.borderColor = options.borderColor || '#D3E0FD';
-                    break;
-                case 'warning':
-                    toast.style.backgroundColor = options.backgroundColor || '#FFFCF0';
-                    toast.style.color = options.color || '#DC7609';
-                    toast.style.borderColor = options.borderColor || '#FDF5D3';
-                    break;
-                default:
-                    // For other types, use default styles
-                    toast.style.backgroundColor = options.backgroundColor || '#FFFFFF';
-                    toast.style.color = options.color || '#171717';
-                    toast.style.borderColor = options.borderColor || '#EDEDED';
-            }
+            const colorConfig = ToastConfig.colors[type] || ToastConfig.colors.default;
+            toast.style.backgroundColor = options.backgroundColor || colorConfig.backgroundColor;
+            toast.style.color = options.color || colorConfig.color;
+            toast.style.borderColor = options.borderColor || colorConfig.borderColor;
         } else {
-            // For other types, use default styles
-            toast.style.backgroundColor = options.backgroundColor || '#FFFFFF';
-            toast.style.color = options.color || '#171717';
-            toast.style.borderColor = options.borderColor || '#EDEDED';
+            const defaultColorConfig = ToastConfig.colors.default;
+            toast.style.backgroundColor = options.backgroundColor || defaultColorConfig.backgroundColor;
+            toast.style.color = options.color || defaultColorConfig.color;
+            toast.style.borderColor = options.borderColor || defaultColorConfig.borderColor;
         }
 
         document.body.appendChild(toast);
@@ -132,8 +170,9 @@ class RippleNotify {
             toast.style.transition = 'opacity 2s ease';
             toast.style.opacity = '0';
             setTimeout(() => toast.remove(), 500);
-        }, 3000); // Remove the toast after 3 seconds
+        }, options.timeout || ToastConfig.timeout); // Use configured timeout or default
     }
 }
 
 window.RippleNotify = RippleNotify;
+export default RippleNotify;
