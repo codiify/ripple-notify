@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ripple Notify</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+	<link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="output/styles.css">
+</head>
+<body>
+
+<section>
+	<div class="container mx-auto">
+		<div class="flex justify-center items-center min-h-screen">
+			<div class="pt-40">
+				<div class="text-center">
+					<h1 class="text-gray-800 text-6xl font-bold font-lobster leading-relaxed">Ripple Notify</h1>
+					<p class="text-gray-600 text-sm leading-relaxed">A simple and lightweight notification library</p>
+
+					<div class="flex justify-center items-center gap-5 my-5">
+						<a href="https://github.com/MdRubelRana/ripple-notify?tab=readme-ov-file" target="_blank"
+						   class="bg-gray-800 border border-gray-800 shadow text-white text-sm font-medium w-36 inline-block py-2.5 rounded-md">Documentation</a>
+						<a href="https://github.com/MdRubelRana/ripple-notify" target="_blank"
+						   class="bg-gray-50 border border-gray-100 shadow text-gray-800 text-sm font-medium w-36 inline-block py-2.5 rounded-md">GitHub</a>
+					</div>
+				</div>
+
+				<div>
+					<div class="container mx-auto max-w-screen-sm my-32 space-y-10">
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Installation</h2>
+							<p class="">
+								<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">npm i @codiify/ripple-notify</code></pre>
+							</p>
+
+						</div>
+
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Usage</h2>
+							<p class="text-gray-600 text-sm leading-6">You need a <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">ripple.js</span> to your project <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">root</span> folder to customize the notification globally. File name must be <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">ripple.js</span> and the content should be like below:</p>
+							<p class="">
+							<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-xs leading-relaxed language-javascript">export const RippleConfig = {
+    timeout: 3000,
+    animationSpeed: '0.5s',
+    duration: 500,
+    colorful: false,
+    icon: true,
+    position: 'top-right',
+    colors: {
+        success: {
+            backgroundColor: '#ECFDF3',
+            color: '#008A2E',
+            borderColor: '#D3FDE5'
+        },
+        error: {
+            backgroundColor: '#FFF0F0',
+            color: '#E60000',
+            borderColor: '#FFE0E1'
+        },
+        info: {
+            backgroundColor: '#F0F8FF',
+            color: '#0973DC',
+            borderColor: '#D3E0FD'
+        },
+        warning: {
+            backgroundColor: '#FFFCF0',
+            color: '#DC7609',
+            borderColor: '#FDF5D3'
+        },
+        default: {
+            backgroundColor: '#FFFFFF',
+            color: '#171717',
+            borderColor: '#EDEDED'
+        }
+    }
+};</code></pre>
+							</p>
+						</div>
+
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Types</h2>
+							<p class="text-gray-600 text-sm leading-relaxed">You can customize the type of toast you
+								want to render, and pass an
+								options object as the second argument.</p>
+							<div class="">
+								<ul class="my-4 flex justify-start items-center gap-5">
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Default
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Success
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Info
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Warning
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Error
+										</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="">
+								<p class="">
+								<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('Payment has been received.')</code></pre>
+								</p>
+							</div>
+						</div>
+
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Position</h2>
+							<p class="text-gray-600 text-sm leading-relaxed">You can customize the position of the notification. Available options are</p>
+							<div class="">
+								<ul class="my-4 flex justify-start items-center gap-5">
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Top left
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Top center
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Top right
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Bottom left
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Bottom center
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Bottom right
+										</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="">
+								<p class="">
+								<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Something went wrong.', {position: 'top-right'})</code></pre>
+								</p>
+							</div>
+						</div>
+
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Colored</h2>
+							<p class="text-gray-600 text-sm leading-relaxed">If you want to show the colorful notification, you can set it to <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">true</span>. Default is <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">false</span>.</p>
+							<div class="">
+								<ul class="my-4 flex justify-start items-center gap-5">
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Built in
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Custom config
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Custom color
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Icon</h2>
+							<p class="text-gray-600 text-sm leading-relaxed">If you don't want to show the icon, you can set it to <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">false</span>. Default is <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">true</span>.</p>
+							<div class="">
+								<ul class="my-4 flex justify-start items-center gap-5">
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Enabled
+										</button>
+									</li>
+									<li>
+										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Disabled
+										</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="">
+								<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.info('Something went wrong.', {icon: false})</code></pre>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<div class="container mx-auto pb-10">
+		<div class="flex justify-center items-center py-5">
+			<div class="">
+				<div class="mb-5">
+					<ul class="flex justify-center items-center gap-4">
+						<li>
+							<a href="https://codiify.com/" target="_blank">
+								<i class="fa-solid fa-earth-americas text-gray-600 hover:bg-gray-100 text-sm border w-7 h-7 flex justify-center items-center rounded-full"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<i class="fa-brands fa-x-twitter text-gray-600 hover:bg-gray-100 text-sm border w-7 h-7 flex justify-center items-center rounded-full"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/ranarubel/" target="_blank">
+								<i class="fa-brands fa-linkedin-in text-gray-600 hover:bg-gray-100 text-sm border w-7 h-7 flex justify-center items-center rounded-full"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<p class="text-gray-600 text-sm leading-relaxed">© 2024 <a href="https://codiify.com/" target="_blank"
+				                                                           class="font-semibold hover:opacity-80 underline underline-offset-2">Codiify</a>
+					. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+
+
+</body>
+</html>
