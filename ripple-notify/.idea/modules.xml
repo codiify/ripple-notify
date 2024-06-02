@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ripple-notify-packages.iml" filepath="$PROJECT_DIR$/.idea/ripple-notify-packages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ripple-notify.iml" filepath="$PROJECT_DIR$/.idea/ripple-notify.iml" />
     </modules>
   </component>
 </project>
