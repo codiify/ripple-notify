@@ -1,9 +1,8 @@
-# Ripple Notify - A simple notification library
 
 [![npm version](https://img.shields.io/npm/v/@codiify/ripple-notify.svg?label=%E2%9B%B1npm&style=for-the-badge)](https://badge.fury.io/js/ripple-notify)
 ![License: ISC](https://img.shields.io/npm/l/@codiify/ripple-notify.svg?label=%F0%9F%93%9Clicense&style=for-the-badge)
 [![Tweeting](https://img.shields.io/twitter/follow/codiify?style=for-the-badge&logo=x)](https://x.com/rth_rubelrana)
-[![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
+[![Support Server](https://img.shields.io/discord/1246870627537653860.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
 
 
 
@@ -83,19 +82,6 @@ console.log(result);
 Provide details about the functions, classes, or methods exposed by your package. Include parameters, return values, and usage examples.
 Check the documentation to get you started with the package [here](rubelran.dev).
 
-### `someFunction()`
-
-Description of the function.
-
-- **Parameters:**
-  - `param1`: Description of param1.
-  - `param2`: Description of param2.
-- **Returns:** Description of return value.
-
-```javascript
-const result = yourPackage.someFunction(param1, param2);
-```
-
 ## Demo
 
 Explain how others can contribute to your project. Include guidelines for submitting issues, feature requests, and pull requests.
@@ -114,8 +100,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 ### Author
-[![Tweeting](https://img.shields.io/twitter/follow/codiify?style=for-the-badge&logo=x)](https://x.com/rth_rubelrana)
-[![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
+[![Tweeting](https://img.shields.io/twitter/follow/rubel_codiify?style=for-the-badge&logo=x)](https://x.com/rubel_codiify)
+[![Support Server](https://img.shields.io/discord/1246870627537653860.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
 
 Optional section to credit contributors, libraries, or resources that inspired or assisted your project.
 

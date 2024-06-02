@@ -62,11 +62,11 @@ export const ToastConfig = {
 
 ```javascript
 <script type="module">
-    import RippleNotify from './node_modules/ripple-notify/index.js';
+  import RippleNotify from './node_modules/ripple-notify/index.js';
 
-    const ripple = RippleNotify;
+  const ripple = RippleNotify;
 
-    window.ripple = ripple;
+  window.ripple = ripple;
 </script>
 ```
 
@@ -88,8 +88,8 @@ Check the documentation to get you started with the package [here](rubelran.dev)
 Description of the function.
 
 - **Parameters:**
-    - `param1`: Description of param1.
-    - `param2`: Description of param2.
+  - `param1`: Description of param1.
+  - `param2`: Description of param2.
 - **Returns:** Description of return value.
 
 ```javascript
