@@ -5,6 +5,10 @@ export let ToastConfig;
     ToastConfig = {
         timeout: 3000,
         animationSpeed: '0.5s',
+        duration: 500,
+        colorful: true,
+        icon: true,
+        position: 'bottom-right',
         colors: {
             success: {
                 backgroundColor: '#ECFDF3',
@@ -83,22 +87,27 @@ class RippleNotify {
         toast.className = `toast toast--${type}`;
 
         const icon = document.createElement('i');
-        icon.className = `toast-icon`;
-        switch (type) {
-            case 'success':
-                icon.classList.add('fas', 'fa-check-circle');
-                break;
-            case 'error':
-                icon.classList.add('fas', 'fa-times-circle');
-                break;
-            case 'info':
-                icon.classList.add('fas', 'fa-info-circle');
-                break;
-            case 'warning':
-                icon.classList.add('fas', 'fa-exclamation-circle');
-                break;
-            default:
-                icon.classList.add('fas', 'fa-bell');
+
+        const showIcon = options.hasOwnProperty('icon') ? options.icon : ToastConfig.icon;
+
+        if (showIcon) {
+            icon.className = `toast-icon`;
+            switch (type) {
+                case 'success':
+                    icon.classList.add('fas', 'fa-check-circle');
+                    break;
+                case 'error':
+                    icon.classList.add('fas', 'fa-times-circle');
+                    break;
+                case 'info':
+                    icon.classList.add('fas', 'fa-info-circle');
+                    break;
+                case 'warning':
+                    icon.classList.add('fas', 'fa-exclamation-circle');
+                    break;
+                default:
+                    icon.classList.add('fas', 'fa-bell');
+            }
         }
 
         const text = document.createElement('span');
@@ -108,7 +117,7 @@ class RippleNotify {
         toast.appendChild(text);
 
         // Set the position of the toast
-        const position = options.position || 'top-right';
+        const position = options.position || ToastConfig.position || 'top-right';
         toast.style.position = 'fixed';
         toast.style.animationDuration = options.animationSpeed || ToastConfig.animationSpeed;
 
@@ -150,7 +159,7 @@ class RippleNotify {
                 toast.style.right = '14px';
         }
 
-        const colorful = options.hasOwnProperty('colorful') ? options.colorful : false;
+        const colorful = options.hasOwnProperty('colorful') ? options.colorful : ToastConfig.colorful;
 
         if (colorful) {
             const colorConfig = ToastConfig.colors[type] || ToastConfig.colors.default;
@@ -169,8 +178,8 @@ class RippleNotify {
         setTimeout(() => {
             toast.style.transition = 'opacity 2s ease';
             toast.style.opacity = '0';
-            setTimeout(() => toast.remove(), 500);
-        }, options.timeout || ToastConfig.timeout); // Use configured timeout or default
+            setTimeout(() => toast.remove(), options.duration || ToastConfig.duration);
+        }, options.timeout || ToastConfig.timeout);
     }
 }
 
