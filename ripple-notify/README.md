@@ -1,9 +1,8 @@
-# Ripple Notify - A simple notification library
 
-[![npm version](https://img.shields.io/npm/v/@codiify/ripple-notify.svg?label=%E2%9B%B1npm&style=for-the-badge)](https://badge.fury.io/js/ripple-notify)
+[![npm version](https://img.shields.io/npm/v/@codiify/ripple-notify.svg?label=%E2%9B%B1npm&style=for-the-badge)](https://badge.fury.io/js/@codiify/ripple-notify)
 ![License: ISC](https://img.shields.io/npm/l/@codiify/ripple-notify.svg?label=%F0%9F%93%9Clicense&style=for-the-badge)
 [![Tweeting](https://img.shields.io/twitter/follow/codiify?style=for-the-badge&logo=x)](https://x.com/rth_rubelrana)
-[![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
+[![Support Server](https://img.shields.io/discord/1246870627537653860.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
 
 
 
@@ -21,101 +20,92 @@ npm i @codiify/ripple-notify
 
 ## Usage
 
-Describe how to use your package and provide code examples:
+After successful installation, you can import the package and use it in your project. You can customize the notification as per your need.
+You need a `ripple.js` to your project `root` folder to customize the notification globally. You can customize the timeout, animation speed, colors and many more.
 
-Describe how to use your package `ripple.js` in the project `root` directory: You will have full flexibility to `customize` the notification as per your need.
-
+###
+File name must be `ripple.js` and the content should be like below:
 ```javascript
-export const ToastConfig = {
-  timeout: 3000,
-  animationSpeed: '0.5s',
-  colors: {
-    success: {
-      backgroundColor: '#ECFDF3',
-      color: '#008A2E',
-      borderColor: '#D3FDE5'
-    },
-    error: {
-      backgroundColor: '#FFF0F0',
-      color: '#E60000',
-      borderColor: '#FFE0E1'
-    },
-    info: {
-      backgroundColor: '#F0F8FF',
-      color: '#0973DC',
-      borderColor: '#D3E0FD'
-    },
-    warning: {
-      backgroundColor: '#FFFCF0',
-      color: '#DC7609',
-      borderColor: '#FDF5D3'
-    },
-    default: {
-      backgroundColor: '#FFFFFF',
-      color: '#171717',
-      borderColor: '#EDEDED'
+export const RippleConfig = {
+    timeout: 3000,
+    animationSpeed: '0.5s',
+    duration: 500,
+    colorful: false,
+    icon: true,
+    position: 'top-right',
+    colors: {
+        success: {
+            backgroundColor: '#ECFDF3',
+            color: '#008A2E',
+            borderColor: '#D3FDE5'
+        },
+        error: {
+            backgroundColor: '#FFF0F0',
+            color: '#E60000',
+            borderColor: '#FFE0E1'
+        },
+        info: {
+            backgroundColor: '#F0F8FF',
+            color: '#0973DC',
+            borderColor: '#D3E0FD'
+        },
+        warning: {
+            backgroundColor: '#FFFCF0',
+            color: '#DC7609',
+            borderColor: '#FDF5D3'
+        },
+        default: {
+            backgroundColor: '#FFFFFF',
+            color: '#171717',
+            borderColor: '#EDEDED'
+        }
     }
-  }
 };
-
 ```
+#
+
+Some of the options you can customize are:
+- `timeout`: Represents the time in milliseconds that the notification will be displayed. Default is `3000`.
+####
+- `animationSpeed`: Animation speed of the notification. Default is `0.5s`.
+####
+- `duration`: It will disappear after the duration. Default is `500`.
+####
+- `colorful`: If you want to show the colorful notification, you can set it to `true`. Default is `false`.
+####
+- `icon`: If you don't want to show the icon, you can set it to `false`. Default is `true`.
+####
+- `position`: You can customize the position of the notification. Available options are `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`.
+
+#
+
 
 ```javascript
 <script type="module">
-  import RippleNotify from './node_modules/ripple-notify/index.js';
+    import RippleNotify from './node_modules/ripple-notify/index.js';
 
-  const ripple = RippleNotify;
+    const ripple = RippleNotify;
 
-  window.ripple = ripple;
+    window.ripple = ripple;
 </script>
 ```
-
-```javascript
-const yourPackage = require('your-package-name');
-
-// Example usage
-const result = yourPackage.someFunction();
-console.log(result);
-```
-
+###
 ## Documentation
 
 Provide details about the functions, classes, or methods exposed by your package. Include parameters, return values, and usage examples.
-Check the documentation to get you started with the package [here](rubelran.dev).
-
-### `someFunction()`
-
-Description of the function.
-
-- **Parameters:**
-  - `param1`: Description of param1.
-  - `param2`: Description of param2.
-- **Returns:** Description of return value.
-
-```javascript
-const result = yourPackage.someFunction(param1, param2);
-```
-
-## Demo
-
-Explain how others can contribute to your project. Include guidelines for submitting issues, feature requests, and pull requests.
-
-## Contributing
-
-Explain how others can contribute to your project. Include guidelines for submitting issues, feature requests, and pull requests.
+Check the documentation to get you started with the package [here](https://www.npmjs.com/package/@codiify/ripple-notify?activeTab=readme).
 
 ## Release Notes
 
-You can find the release note for the latest release [here](rubelran.dev).
+You can find the release note for the latest release [here](https://www.npmjs.com/package/@codiify/ripple-notify?activeTab=versions).
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the ISC License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 ### Author
-[![Tweeting](https://img.shields.io/twitter/follow/codiify?style=for-the-badge&logo=x)](https://x.com/rth_rubelrana)
-[![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
+[![Tweeting](https://img.shields.io/twitter/follow/rubel_codiify?style=for-the-badge&logo=x)](https://x.com/rubel_codiify)
+[![Support Server](https://img.shields.io/discord/1246870627537653860.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
 
-Optional section to credit contributors, libraries, or resources that inspired or assisted your project.
 
