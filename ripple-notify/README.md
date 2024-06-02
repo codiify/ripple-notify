@@ -1,9 +1,9 @@
 # Ripple Notify - A simple notification library
 
-[![npm version](https://img.shields.io/npm/l/ripple-notify.svg?label=%E2%9B%B1license&style=for-the-badge)](https://badge.fury.io/js/ripple-notify)
-![License: ISC](https://img.shields.io/npm/l/ripple-notify.svg?label=%F0%9F%93%9Clicense&style=for-the-badge)
+[![npm version](https://img.shields.io/npm/v/@codiify/ripple-notify.svg?label=%E2%9B%B1npm&style=for-the-badge)](https://badge.fury.io/js/ripple-notify)
+![License: ISC](https://img.shields.io/npm/l/@codiify/ripple-notify.svg?label=%F0%9F%93%9Clicense&style=for-the-badge)
 [![Tweeting](https://img.shields.io/twitter/follow/codiify?style=for-the-badge&logo=x)](https://x.com/rth_rubelrana)
-[![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vpEv3HJ)
+[![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
 
 
 
@@ -16,7 +16,7 @@ RippleNotify is a sleek and efficient notification package designed to deliver s
 You can install this package via npm:
 
 ```bash
-npm install ripple-notify
+npm i @codiify/ripple-notify
 ```
 
 ## Usage
@@ -115,7 +115,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 ### Author
 [![Tweeting](https://img.shields.io/twitter/follow/codiify?style=for-the-badge&logo=x)](https://x.com/rth_rubelrana)
-[![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vpEv3HJ)
+[![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
 
 Optional section to credit contributors, libraries, or resources that inspired or assisted your project.
 
