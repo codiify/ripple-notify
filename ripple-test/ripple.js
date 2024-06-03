@@ -10,10 +10,10 @@
  */
  
 export const RippleConfig = {
-    timeout: 3000,
+    timeout: 300000,
     animationSpeed: '0.5s',
-    duration: 500,
-    colorful: true,
+    duration: 50000,
+    colorful: false,
     icon: true,
     position: 'bottom-right',
     colors: {
