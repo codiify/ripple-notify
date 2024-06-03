@@ -10,7 +10,9 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 	<link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet">
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+	<link rel="stylesheet" href="node_modules/ripple-notify/styles.css">
 	<link rel="stylesheet" href="output/styles.css">
 </head>
 <body>
@@ -83,7 +85,7 @@
 							</p>
 						</div>
 
-						<div class="">
+						<div x-data="{ activeType: 'default' }" class="">
 							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Types</h2>
 							<p class="text-gray-600 text-sm leading-relaxed">You can customize the type of toast you
 								want to render, and pass an
@@ -91,27 +93,27 @@
 							<div class="">
 								<ul class="my-4 flex justify-start items-center gap-5">
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeType = 'default'" :class="{ 'bg-gray-100': activeType === 'default' }" onclick="ripple.default('Event has been created.')" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Default
 										</button>
 									</li>
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeType = 'success'" :class="{ 'bg-gray-100': activeType === 'success' }" onclick="ripple.success('You have achieved your goal 🏆')" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Success
 										</button>
 									</li>
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeType = 'info'" :class="{ 'bg-gray-100': activeType === 'info' }" onclick="ripple.info('Please provide more information.')" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Info
 										</button>
 									</li>
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeType = 'warning'" :class="{ 'bg-gray-100': activeType === 'warning' }" onclick="ripple.warning('Warning! This action is irreversible.')" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Warning
 										</button>
 									</li>
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeType = 'error'" :class="{ 'bg-gray-100': activeType === 'error' }" onclick="ripple.error('Oops! Something went wrong.')" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Error
 										</button>
 									</li>
@@ -119,44 +121,56 @@
 							</div>
 
 							<div class="">
-								<p class="">
-								<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('Payment has been received.')</code></pre>
-								</p>
+								<div x-show.transition.in="activeType === 'default'" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.default('Event has been created.')</code></pre>
+								</div>
+								<div x-show.transition.in="activeType === 'success'" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆')</code></pre>
+								</div>
+								<div x-show.transition.in="activeType === 'info'" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.info('Please provide more information.')</code></pre>
+								</div>
+								<div x-show.transition.in="activeType === 'warning'" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.warning('Warning! This action is irreversible.')</code></pre>
+								</div>
+								<div x-show.transition.in="activeType === 'error'" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.')</code></pre>
+								</div>
 							</div>
 						</div>
 
-						<div class="">
+						<div x-data="{ activePosition: 'top-left' }" class="">
 							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Position</h2>
 							<p class="text-gray-600 text-sm leading-relaxed">You can customize the position of the notification. Available options are</p>
 							<div class="">
 								<ul class="my-4 flex justify-start items-center gap-5">
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'top-left'" :class="{ 'bg-gray-100': activePosition === 'top-left' }" onclick="ripple.default('Event has been created.', {position: 'top-left'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Top left
 										</button>
 									</li>
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'top-center'" :class="{ 'bg-gray-100': activePosition === 'top-center' }" onclick="ripple.success('You have achieved your goal 🏆', {position: 'top-center'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Top center
 										</button>
 									</li>
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'top-right'" :class="{ 'bg-gray-100': activePosition === 'top-right' }" onclick="ripple.info('Please provide more information.', {position: 'top-right'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Top right
 										</button>
 									</li>
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'bottom-left'" :class="{ 'bg-gray-100': activePosition === 'bottom-left' }" onclick="ripple.warning('Warning! This action is irreversible.', {position: 'bottom-left'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Bottom left
 										</button>
 									</li>
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'bottom-center'" :class="{ 'bg-gray-100': activePosition === 'bottom-center' }" onclick="ripple.error('Oops! Something went wrong.', {position: 'bottom-center'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Bottom center
 										</button>
 									</li>
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'bottom-right'" :class="{ 'bg-gray-100': activePosition === 'bottom-right' }" onclick="ripple.success('You have achieved your goal 🏆', {position: 'bottom-right'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Bottom right
 										</button>
 									</li>
@@ -164,13 +178,28 @@
 							</div>
 
 							<div class="">
-								<p class="">
-								<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Something went wrong.', {position: 'top-right'})</code></pre>
-								</p>
+								<div x-show.transition.in="activePosition === 'top-left'" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.default('Event has been created.')</code></pre>
+								</div>
+								<div x-show.transition.in="activePosition === 'top-center'" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆')</code></pre>
+								</div>
+								<div x-show.transition.in="activePosition === 'top-right'" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.info('Please provide more information.')</code></pre>
+								</div>
+								<div x-show.transition.in="activePosition === 'bottom-left'" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.warning('Warning! This action is irreversible.')</code></pre>
+								</div>
+								<div x-show.transition.in="activePosition === 'bottom-center'" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.')</code></pre>
+								</div>
+								<div x-show.transition.in="activePosition === 'bottom-right'" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆')</code></pre>
+								</div>
 							</div>
 						</div>
 
-						<div class="">
+						<div x-data="{ activeColor: 'top-left' }" class="">
 							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Colored</h2>
 							<p class="text-gray-600 text-sm leading-relaxed">If you want to show the colorful notification, you can set it to <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">true</span>. Default is <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">false</span>.</p>
 							<div class="">
@@ -194,18 +223,18 @@
 							</div>
 						</div>
 
-						<div class="">
+						<div x-data="{ activeIcon: true }" class="">
 							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Icon</h2>
 							<p class="text-gray-600 text-sm leading-relaxed">If you don't want to show the icon, you can set it to <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">false</span>. Default is <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">true</span>.</p>
 							<div class="">
 								<ul class="my-4 flex justify-start items-center gap-5">
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeIcon = true" :class="{ 'bg-gray-100': activeIcon === true }" onclick="ripple.success('You have achieved your goal 🏆', {icon: true})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Enabled
 										</button>
 									</li>
 									<li>
-										<button class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeIcon = false" :class="{ 'bg-gray-100': activeIcon === false }" onclick="ripple.error('Event has been created.', {icon: false})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Disabled
 										</button>
 									</li>
@@ -213,8 +242,12 @@
 							</div>
 
 							<div class="">
-								<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.info('Something went wrong.', {icon: false})</code></pre>
-								</p>
+								<div x-show.transition.in="activeIcon === true" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆')</code></pre>
+								</div>
+								<div x-show.transition.in="activeIcon === false" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.')</code></pre>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -259,6 +292,13 @@
 
 <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
 
+<script type="module">
+    import RippleNotify from './node_modules/ripple-notify/index.js';
+
+    const ripple = RippleNotify;
+
+    window.ripple = ripple;
+</script>
 
 </body>
 </html>

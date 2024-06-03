@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abfb47dc-e33a-4bb6-98e0-a057d5d7a5cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ripple-notify/postinstall.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ripple-notify/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ripple-notify/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/output/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ripple-notify/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +98,7 @@
       <workItem from="1717355369924" duration="3848000" />
       <workItem from="1717359382284" duration="552000" />
       <workItem from="1717360114253" duration="425000" />
-      <workItem from="1717429650776" duration="2846000" />
+      <workItem from="1717429650776" duration="6035000" />
     </task>
     <servers />
   </component>
