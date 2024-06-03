@@ -648,6 +648,10 @@ video {
   max-width: 640px;
 }
 
+.max-w-screen-md{
+  max-width: 768px;
+}
+
 .items-center{
   align-items: center;
 }
