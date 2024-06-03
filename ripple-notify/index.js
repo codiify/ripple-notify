@@ -65,9 +65,9 @@ export let RippleConfig;
                 ...customConfigModule.RippleConfig.colors // Override with custom colors
             },
         };
-        console.log('Custom configuration loaded:', customConfigModule.RippleConfig);
+        // console.log('Custom configuration loaded:', customConfigModule.RippleConfig);
     } catch (e) {
-        console.warn(`Custom configuration file not found at ${customConfigPath}. Using default configuration.`);
+        // console.warn(`Custom configuration file not found at ${customConfigPath}. Using default configuration.`);
     }
 })();
 
