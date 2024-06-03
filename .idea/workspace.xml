@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abfb47dc-e33a-4bb6-98e0-a057d5d7a5cd" name="Changes" comment="" />
+    <list default="true" id="abfb47dc-e33a-4bb6-98e0-a057d5d7a5cd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ripple-notify/postinstall.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ripple-notify/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ripple-notify/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,19 +51,33 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.laravel-idea.search-composer-json": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/laragon/www/New folder/ripple-notify-packages/website",
+    "javascript.nodejs.core.library.configured.version": "21.0.0",
+    "javascript.nodejs.core.library.typings.version": "20.14.0",
+    "last_opened_file_path": "C:/laragon/www/New folder/ripple-notify-packages/ripple-notify/package.json",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.Postinstall Script.executor": "Run",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.5\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\New folder\ripple-notify-packages\assets\images" />
       <recent name="C:\laragon\www\New folder\ripple-notify-packages\website" />
       <recent name="C:\laragon\www\New folder\ripple-notify-packages\documentation" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Postinstall Script" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/ripple-notify/package.json" />
+      <command value="install" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -78,6 +98,8 @@
       <workItem from="1717354607017" duration="743000" />
       <workItem from="1717355369924" duration="3848000" />
       <workItem from="1717359382284" duration="552000" />
+      <workItem from="1717360114253" duration="425000" />
+      <workItem from="1717429650776" duration="2846000" />
     </task>
     <servers />
   </component>
