@@ -55,6 +55,7 @@ export let RippleConfig;
     try {
         // Try to import the custom config file
         const customConfigModule = await import(customConfigPath);
+
         // Merge the custom config with the default config
         RippleConfig = {
             ...RippleConfig,
@@ -62,11 +63,11 @@ export let RippleConfig;
             colors: {
                 ...RippleConfig.colors, // Preserve the default colors
                 ...customConfigModule.RippleConfig.colors // Override with custom colors
-            }
+            },
         };
-        // console.log('Custom configuration loaded:', customConfigModule.RippleConfig);
+        console.log('Custom configuration loaded:', customConfigModule.RippleConfig);
     } catch (e) {
-        // console.warn(`Custom configuration file not found at ${customConfigPath}. Using default configuration.`);
+        console.warn(`Custom configuration file not found at ${customConfigPath}. Using default configuration.`);
     }
 })();
 
@@ -194,4 +195,4 @@ class RippleNotify {
 
 window.RippleNotify = RippleNotify;
 
-export { RippleNotify as ripple };
+export default RippleNotify;
