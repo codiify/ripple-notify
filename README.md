@@ -1,7 +1,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@codiify/ripple-notify.svg?label=%E2%9B%B1npm&style=for-the-badge)](https://badge.fury.io/js/@codiify/ripple-notify)
 ![License: ISC](https://img.shields.io/npm/l/@codiify/ripple-notify.svg?label=%F0%9F%93%9Clicense&style=for-the-badge)
-[![Tweeting](https://img.shields.io/twitter/follow/codiify?style=for-the-badge&logo=x)](https://x.com/rth_rubelrana)
+[![Tweeting](https://img.shields.io/twitter/follow/codiify_ui?style=for-the-badge&logo=x)](https://x.com/codiify_ui)
 [![Support Server](https://img.shields.io/discord/1246870627537653860.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
 
 
@@ -79,6 +79,11 @@ Some of the options you can customize are:
 
 #
 
+```html
+<link rel="stylesheet" href="node_modules/ripple-notify/styles.css">
+```
+
+###
 
 ```javascript
 <script type="module">
@@ -93,7 +98,7 @@ Some of the options you can customize are:
 ## Documentation
 
 Provide details about the functions, classes, or methods exposed by your package. Include parameters, return values, and usage examples.
-Check the documentation to get you started with the package [here](https://www.npmjs.com/package/@codiify/ripple-notify?activeTab=readme).
+Check the documentation to get you started with the package [here](https://mdrubelrana.github.io/ripple-notify/).
 
 ## Release Notes
 
