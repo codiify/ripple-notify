@@ -11,16 +11,6 @@ const filePath = join(rootDir, 'ripple.js');
 console.log('Attempting to create ripple.js at:', filePath);
 
 const fileContent = `
-/*
-  Copyrights: Codiify
-  Website: https://www.codiify.com
-  Developer: Md. Rubel Rana
-  Dev website: https://www.rubelrana.dev
-
-  Official x account: https://x.com/codiify_ui
-  Developer x account: https://www.x.com/rubel_codiify
- */
- 
 export const RippleConfig = {
     timeout: 3000,
     animationSpeed: '0.5s',
@@ -60,7 +50,7 @@ export const RippleConfig = {
 
 try {
     await fs.writeFile(filePath, fileContent);
-    console.log('ripple.js file created successfully.');
+    // console.log('ripple.js file created successfully.');
 } catch (err) {
-    console.error('Failed to create ripple.js file:', err);
+    // console.error('Failed to create ripple.js file:', err);
 }

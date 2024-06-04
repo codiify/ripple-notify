@@ -1,5 +1,6 @@
 /* styles.css */
 .toast {
+    position: relative;
     width: 316px;
     display: flex;
     align-items: start;
@@ -24,6 +25,14 @@
     font-size: 14px;
     margin-right: 8px;
     margin-top: 2px;
+}
+
+.toast-progress-bar {
+    position: absolute;
+    background: red;
+    width: 100%;
+    height: 4px;
+    left: 0;
 }
 
 @keyframes slideInRight {

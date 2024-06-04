@@ -8,7 +8,7 @@
 
 
 
-RippleNotify is a sleek and efficient notification package designed to deliver subtle yet effective alerts across various digital platforms. Its intuitive design seamlessly integrates into web and mobile applications, providing unobtrusive notifications that capture user attention without disrupting workflow. Stay informed with RippleNotify's prompt and seamless communication.
+Ripple notify is a sleek and efficient notification package designed to deliver subtle yet effective alerts across various digital platforms. Its intuitive design seamlessly integrates into web and mobile applications, providing unobtrusive notifications that capture user attention without disrupting workflow. Stay informed with Ripple notify's prompt and seamless communication.
 
 ## Installation
 

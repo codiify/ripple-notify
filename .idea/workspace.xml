@@ -8,8 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/output/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ripple-notify/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ripple-notify/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ripple-notify/postinstall.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/postinstall.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ripple-notify/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +105,9 @@
       <workItem from="1717446543770" duration="460000" />
       <workItem from="1717447046913" duration="104000" />
       <workItem from="1717447177659" duration="9000" />
+      <workItem from="1717447195335" duration="710000" />
+      <workItem from="1717447926515" duration="25000" />
+      <workItem from="1717511177885" duration="5870000" />
     </task>
     <servers />
   </component>
