@@ -378,7 +378,7 @@ colors: {
 									<li>
 										<button @click="progressBar = true"
 										        :class="{ 'bg-gray-100': progressBar === true }"
-										        onclick="ripple.success('You have achieved your goal 🏆', {icon: true})"
+										        onclick="ripple.success('You have achieved your goal 🏆', {progressBar: true})"
 										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Enabled
 										</button>
@@ -386,7 +386,7 @@ colors: {
 									<li>
 										<button @click="progressBar = false"
 										        :class="{ 'bg-gray-100': progressBar === false }"
-										        onclick="ripple.error('Event has been created.', {icon: false})"
+										        onclick="ripple.error('Event has been created.', {progressBar: false})"
 										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Disabled
 										</button>
@@ -397,11 +397,11 @@ colors: {
 							<div class="">
 								<div x-show.transition.in="progressBar === true" class="code-block">
 									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
-											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆', {icon: true})</code></pre>
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆', {progressBar: true})</code></pre>
 								</div>
 								<div x-show.transition.in="progressBar === false" class="code-block">
 									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
-											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.', {icon: false})</code></pre>
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.', {progressBar: false})</code></pre>
 								</div>
 							</div>
 						</div>
@@ -467,7 +467,7 @@ colors: {
 									<td class="border border-gray-200 text-left px-4 py-3">
 										progressbar
 									</td>
-									<td class="border border-gray-200 text-left px-4 py-3">Progressbar displayed from right to left.
+									<td class="border border-gray-200 text-left px-4 py-3">Progressbar displayed relatively.
 										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">true</span>,
 										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">false</span>
 									</td>
@@ -477,31 +477,22 @@ colors: {
 									<td class="border border-gray-200 text-left px-4 py-3">
 										timeout
 									</td>
-									<td class="border border-gray-200 text-left px-4 py-3">Progressbar displayed from right to left.
-										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">true</span>,
-										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">false</span>
-									</td>
-									<td class="border border-gray-200 text-left px-4 py-3">300</td>
+									<td class="border border-gray-200 text-left px-4 py-3">Represents the time in milliseconds that the notification will be displayed.</td>
+									<td class="border border-gray-200 text-left px-4 py-3">3000ms</td>
 								</tr>
 								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
 									<td class="border border-gray-200 text-left px-4 py-3">
 										animationSpeed
 									</td>
-									<td class="border border-gray-200 text-left px-4 py-3">Progressbar displayed from right to left.
-										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">true</span>,
-										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">false</span>
-									</td>
+									<td class="border border-gray-200 text-left px-4 py-3">Animation speed of the notification</td>
 									<td class="border border-gray-200 text-left px-4 py-3">0.5s</td>
 								</tr>
 								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
 									<td class="border border-gray-200 text-left px-4 py-3">
 										duration
 									</td>
-									<td class="border border-gray-200 text-left px-4 py-3">Progressbar displayed from right to left.
-										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">true</span>,
-										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">false</span>
-									</td>
-									<td class="border border-gray-200 text-left px-4 py-3">500</td>
+									<td class="border border-gray-200 text-left px-4 py-3">It will disappear after the duration.</td>
+									<td class="border border-gray-200 text-left px-4 py-3">500ms</td>
 								</tr>
 								</tbody>
 							</table>

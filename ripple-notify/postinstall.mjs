@@ -18,6 +18,7 @@ export const RippleConfig = {
     colorful: true,
     icon: true,
     position: 'bottom-right',
+    progressBar: true,
     colors: {
         success: {
             backgroundColor: '#ECFDF3',

@@ -1,14 +1,4 @@
 
-/*
-  Copyrights: Codiify
-  Website: https://www.codiify.com
-  Developer: Md. Rubel Rana
-  Dev website: https://www.rubelrana.dev
-
-  Official x account: https://x.com/codiify_ui
-  Developer x account: https://www.x.com/rubel_codiify
- */
- 
 export const RippleConfig = {
     timeout: 3000,
     animationSpeed: '0.5s',
@@ -16,6 +6,7 @@ export const RippleConfig = {
     colorful: true,
     icon: true,
     position: 'bottom-right',
+    progressBar: true,
     colors: {
         success: {
             backgroundColor: '#ECFDF3',
