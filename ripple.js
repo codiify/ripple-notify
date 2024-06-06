@@ -1,4 +1,3 @@
-
 export const RippleConfig = {
     timeout: 3000,
     animationSpeed: '0.5s',
