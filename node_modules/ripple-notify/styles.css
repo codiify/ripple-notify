@@ -25,36 +25,25 @@
 .toast-progress {
     position: absolute;
     bottom: 0;
-    left: 0;
+    /*left: 0;*/
     width: 100%;
     height: 4px;
     background-color: #007bff;
     z-index: 9999;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-    /*animation: progressAnimation 3s linear infinite;*/
 }
 
-
-/* Animation class for left to right progress bar animation */
-.progress-left-to-right {
-    animation: progress-left-to-right-animation linear infinite;
-}
 
 @keyframes progress-left-to-right-animation {
     0% {
-        width: 0;
+        width: 100%;
         left: 0;
     }
     100% {
-        width: 100%;
-        right: 0;
+        width: 0;
+        left: 0;
     }
-}
-
-/* Animation class for right to left progress bar animation */
-.progress-right-to-left {
-    animation: progress-right-to-left-animation linear infinite;
 }
 
 @keyframes progress-right-to-left-animation {
@@ -67,18 +56,6 @@
         left: 0;
     }
 }
-
-
-/*@keyframes progressAnimation {*/
-/*    0% {*/
-/*        width: 100%;*/
-/*        right: 0;*/
-/*    }*/
-/*    100% {*/
-/*        width: 0;*/
-/*        left: 0;*/
-/*    }*/
-/*}*/
 
 @keyframes slideInRight {
     from {
