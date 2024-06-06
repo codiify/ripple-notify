@@ -597,9 +597,9 @@ video {
   margin-right: auto;
 }
 
-.my-32{
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+.my-24{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .my-4{
@@ -616,12 +616,24 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mt-2{
+  margin-top: 0.5rem;
+}
+
 .inline-block{
   display: inline-block;
 }
 
 .flex{
   display: flex;
+}
+
+.table{
+  display: table;
+}
+
+.hidden{
+  display: none;
 }
 
 .h-7{
@@ -636,6 +648,14 @@ video {
   width: 6rem;
 }
 
+.w-28{
+  width: 7rem;
+}
+
+.w-32{
+  width: 8rem;
+}
+
 .w-36{
   width: 9rem;
 }
@@ -644,12 +664,16 @@ video {
   width: 1.75rem;
 }
 
-.max-w-screen-sm{
-  max-width: 640px;
+.w-full{
+  width: 100%;
 }
 
 .max-w-screen-md{
   max-width: 768px;
+}
+
+.table-auto{
+  table-layout: auto;
 }
 
 .items-center{
@@ -718,6 +742,11 @@ video {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity)) !important;
 }
 
+.bg-gray-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .bg-gray-200{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -733,14 +762,14 @@ video {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
-.bg-gray-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .py-0{
@@ -758,6 +787,11 @@ video {
   padding-bottom: 0.625rem;
 }
 
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -769,6 +803,10 @@ video {
 
 .pt-40{
   padding-top: 10rem;
+}
+
+.text-left{
+  text-align: left;
 }
 
 .text-center{
@@ -823,6 +861,10 @@ video {
 
 .italic{
   font-style: italic;
+}
+
+.leading-4{
+  line-height: 1rem;
 }
 
 .leading-5{
@@ -889,14 +931,18 @@ video {
   font-family: "Roboto", sans-serif;
 }
 
-.hover\:bg-gray-100:hover{
+.odd\:bg-gray-100:nth-child(odd){
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-gray-200:hover{
+.even\:bg-transparent:nth-child(even){
+  background-color: transparent;
+}
+
+.hover\:bg-gray-100:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .hover\:opacity-80:hover{

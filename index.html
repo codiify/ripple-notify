@@ -8,7 +8,7 @@
 	<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 	<title>Ripple Notify - A simple and lightweight toastr library</title>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 	<link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet">
 	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -27,26 +27,35 @@
 
 					<div class="flex justify-center items-center gap-5 my-5">
 						<a href="https://github.com/MdRubelRana/ripple-notify?tab=readme-ov-file" target="_blank"
-						   class="bg-gray-800 border border-gray-800 shadow text-white text-sm font-medium w-36 inline-block py-2.5 rounded-md">Documentation</a>
-						<a href="https://github.com/MdRubelRana/ripple-notify" target="_blank"
-						   class="bg-gray-50 border border-gray-100 shadow text-gray-800 text-sm font-medium w-36 inline-block py-2.5 rounded-md">GitHub</a>
+						   class="bg-gray-800 border border-gray-800 shadow text-white text-sm font-medium w-36 inline-block py-2.5 rounded-md">GitHub</a>
+						<a href="https://www.npmjs.com/package/ripple-notify" target="_blank"
+						   class="bg-gray-50 border border-gray-100 shadow text-gray-800 text-sm font-medium w-36 inline-block py-2.5 rounded-md">NPM</a>
 					</div>
 				</div>
 
 				<div>
-					<div class="container mx-auto max-w-screen-md my-32 space-y-10">
+					<div class="container mx-auto max-w-screen-md my-24 space-y-10">
+						<p class="text-gray-600 text-sm leading-6">Ripple notify is a sleek and efficient notification package designed to deliver subtle yet effective alerts across various digital platforms. Its intuitive design seamlessly integrates into web and mobile applications, providing unobtrusive notifications that capture user attention without disrupting workflow. Stay informed with Ripple notify's prompt and seamless communication.</p>
 						<div class="">
 							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Installation</h2>
 							<p class="">
-								<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">npm i ripple-notify</code></pre>
+							<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+									class="!text-gray-600 !text-sm leading-relaxed language-bash">npm i ripple-notify</code></pre>
 							</p>
 						</div>
 
-						<div class="">
+						<div class="hidden">
 							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Usage</h2>
-							<p class="text-gray-600 text-sm leading-6">You need a <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">ripple.js</span> to your project <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">root</span> folder to customize the toastr globally. File name must be <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">ripple.js</span> and the content should be like below:</p>
+							<p class="text-gray-600 text-sm leading-6">You need a <span
+									class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">ripple.js</span>
+								to your project <span
+										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">root</span>
+								folder to customize the toastr globally. File name must be <span
+										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">ripple.js</span>
+								and the content should be like below:</p>
 							<p class="">
-							<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-xs leading-relaxed language-javascript">export const RippleConfig = {
+							<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+									class="!text-gray-600 !text-xs leading-relaxed language-javascript">export const RippleConfig = {
     timeout: 3000,
     animationSpeed: '0.5s',
     duration: 500,
@@ -92,27 +101,42 @@
 							<div class="">
 								<ul class="my-4 flex justify-start items-center gap-5">
 									<li>
-										<button @click="activeType = 'default'" :class="{ 'bg-gray-100': activeType === 'default' }" onclick="ripple.default('Event has been created.')" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeType = 'default'"
+										        :class="{ 'bg-gray-100': activeType === 'default' }"
+										        onclick="ripple.default('Event has been created.')"
+										        class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Default
 										</button>
 									</li>
 									<li>
-										<button @click="activeType = 'success'" :class="{ 'bg-gray-100': activeType === 'success' }" onclick="ripple.success('You have achieved your goal 🏆')" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeType = 'success'"
+										        :class="{ 'bg-gray-100': activeType === 'success' }"
+										        onclick="ripple.success('You have achieved your goal 🏆')"
+										        class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Success
 										</button>
 									</li>
 									<li>
-										<button @click="activeType = 'info'" :class="{ 'bg-gray-100': activeType === 'info' }" onclick="ripple.info('Please provide more information.')" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeType = 'info'"
+										        :class="{ 'bg-gray-100': activeType === 'info' }"
+										        onclick="ripple.info('Please provide more information.')"
+										        class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Info
 										</button>
 									</li>
 									<li>
-										<button @click="activeType = 'warning'" :class="{ 'bg-gray-100': activeType === 'warning' }" onclick="ripple.warning('Warning! This action is irreversible.')" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeType = 'warning'"
+										        :class="{ 'bg-gray-100': activeType === 'warning' }"
+										        onclick="ripple.warning('Warning! This action is irreversible.')"
+										        class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Warning
 										</button>
 									</li>
 									<li>
-										<button @click="activeType = 'error'" :class="{ 'bg-gray-100': activeType === 'error' }" onclick="ripple.error('Oops! Something went wrong.')" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeType = 'error'"
+										        :class="{ 'bg-gray-100': activeType === 'error' }"
+										        onclick="ripple.error('Oops! Something went wrong.')"
+										        class="bg-gray-50 hover:bg-gray-100 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Error
 										</button>
 									</li>
@@ -121,55 +145,79 @@
 
 							<div class="">
 								<div x-show.transition.in="activeType === 'default'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.default('Event has been created.')</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.default('Event has been created.')</code></pre>
 								</div>
 								<div x-show.transition.in="activeType === 'success'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆')</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆')</code></pre>
 								</div>
 								<div x-show.transition.in="activeType === 'info'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.info('Please provide more information.')</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.info('Please provide more information.')</code></pre>
 								</div>
 								<div x-show.transition.in="activeType === 'warning'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.warning('Warning! This action is irreversible.')</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.warning('Warning! This action is irreversible.')</code></pre>
 								</div>
 								<div x-show.transition.in="activeType === 'error'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.')</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.')</code></pre>
 								</div>
 							</div>
 						</div>
 
 						<div x-data="{ activePosition: 'top-left' }" class="">
 							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Position</h2>
-							<p class="text-gray-600 text-sm leading-relaxed">You can customize the position of the toastr. Available options are</p>
+							<p class="text-gray-600 text-sm leading-relaxed">You can customize the position of the
+								toastr. Available options are</p>
 							<div class="">
 								<ul class="my-4 flex justify-start items-center gap-5">
 									<li>
-										<button @click="activePosition = 'top-left'" :class="{ 'bg-gray-100': activePosition === 'top-left' }" onclick="ripple.default('Event has been created.', {position: 'top-left'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'top-left'"
+										        :class="{ 'bg-gray-100': activePosition === 'top-left' }"
+										        onclick="ripple.default('Event has been created.', {position: 'top-left'})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Top left
 										</button>
 									</li>
 									<li>
-										<button @click="activePosition = 'top-center'" :class="{ 'bg-gray-100': activePosition === 'top-center' }" onclick="ripple.success('You have achieved your goal 🏆', {position: 'top-center'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'top-center'"
+										        :class="{ 'bg-gray-100': activePosition === 'top-center' }"
+										        onclick="ripple.success('You have achieved your goal 🏆', {position: 'top-center'})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Top center
 										</button>
 									</li>
 									<li>
-										<button @click="activePosition = 'top-right'" :class="{ 'bg-gray-100': activePosition === 'top-right' }" onclick="ripple.info('Please provide more information.', {position: 'top-right'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'top-right'"
+										        :class="{ 'bg-gray-100': activePosition === 'top-right' }"
+										        onclick="ripple.info('Please provide more information.', {position: 'top-right'})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Top right
 										</button>
 									</li>
 									<li>
-										<button @click="activePosition = 'bottom-left'" :class="{ 'bg-gray-100': activePosition === 'bottom-left' }" onclick="ripple.warning('Warning! This action is irreversible.', {position: 'bottom-left'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'bottom-left'"
+										        :class="{ 'bg-gray-100': activePosition === 'bottom-left' }"
+										        onclick="ripple.warning('Warning! This action is irreversible.', {position: 'bottom-left'})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Bottom left
 										</button>
 									</li>
 									<li>
-										<button @click="activePosition = 'bottom-center'" :class="{ 'bg-gray-100': activePosition === 'bottom-center' }" onclick="ripple.error('Oops! Something went wrong.', {position: 'bottom-center'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'bottom-center'"
+										        :class="{ 'bg-gray-100': activePosition === 'bottom-center' }"
+										        onclick="ripple.error('Oops! Something went wrong.', {position: 'bottom-center'})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Bottom center
 										</button>
 									</li>
 									<li>
-										<button @click="activePosition = 'bottom-right'" :class="{ 'bg-gray-100': activePosition === 'bottom-right' }" onclick="ripple.success('You have achieved your goal 🏆', {position: 'bottom-right'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activePosition = 'bottom-right'"
+										        :class="{ 'bg-gray-100': activePosition === 'bottom-right' }"
+										        onclick="ripple.success('You have achieved your goal 🏆', {position: 'bottom-right'})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Bottom right
 										</button>
 									</li>
@@ -178,48 +226,71 @@
 
 							<div class="">
 								<div x-show.transition.in="activePosition === 'top-left'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.default('Event has been created.', {position: 'top-left'})</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.default('Event has been created.', {position: 'top-left'})</code></pre>
 								</div>
 								<div x-show.transition.in="activePosition === 'top-center'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆', {position: 'top-center'})</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆', {position: 'top-center'})</code></pre>
 								</div>
 								<div x-show.transition.in="activePosition === 'top-right'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.info('Please provide more information.', {position: 'top-right'})</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.info('Please provide more information.', {position: 'top-right'})</code></pre>
 								</div>
 								<div x-show.transition.in="activePosition === 'bottom-left'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.warning('Warning! This action is irreversible.', {position: 'bottom-left'})</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.warning('Warning! This action is irreversible.', {position: 'bottom-left'})</code></pre>
 								</div>
 								<div x-show.transition.in="activePosition === 'bottom-center'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.', {position: 'bottom-center'})</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.', {position: 'bottom-center'})</code></pre>
 								</div>
 								<div x-show.transition.in="activePosition === 'bottom-right'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆', {position: 'bottom-right'})</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆', {position: 'bottom-right'})</code></pre>
 								</div>
 							</div>
 						</div>
 
 						<div x-data="{ activeColor: true }" class="">
 							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Colored</h2>
-							<p class="text-gray-600 text-sm leading-relaxed">If you want to show the colorful toastr, you can set it to <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">true</span>. Default is <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">false</span>.</p>
+							<p class="text-gray-600 text-sm leading-relaxed">If you want to show the colorful toastr,
+								you can set it to <span
+										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">true</span>.
+								Default is <span
+										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">false</span>.
+							</p>
 							<div class="">
 								<ul class="my-4 flex justify-start items-center gap-5">
 									<li>
-										<button @click="activeColor = true" :class="{ 'bg-gray-100': activeColor === true }" onclick="ripple.success('You have achieved your goal 🏆', {colorful: true})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeColor = true"
+										        :class="{ 'bg-gray-100': activeColor === true }"
+										        onclick="ripple.success('You have achieved your goal 🏆', {colorful: true})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Enabled
 										</button>
 									</li>
 									<li>
-										<button @click="activeColor = false" :class="{ 'bg-gray-100': activeColor === false }" onclick="ripple.error('Oops! Something went wrong.', {colorful: false})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeColor = false"
+										        :class="{ 'bg-gray-100': activeColor === false }"
+										        onclick="ripple.error('Oops! Something went wrong.', {colorful: false})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Disabled
 										</button>
 									</li>
 									<li>
-										<button @click="activeColor = 'custom-config'" :class="{ 'bg-gray-100': activeColor === 'custom-config' }" onclick="ripple.info('Oops! Something went wrong.')" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeColor = 'custom-config'"
+										        :class="{ 'bg-gray-100': activeColor === 'custom-config' }"
+										        onclick="ripple.info('Oops! Something went wrong.')"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Custom config
 										</button>
 									</li>
 									<li>
-										<button @click="activeColor = 'custom-color'" :class="{ 'bg-gray-100': activeColor === 'custom-color' }" onclick="ripple.error('Oops! Something went wrong.', {colorful: true, backgroundColor: '#FFF0F0', color: '#E60000', borderColor: '#FFE0E1'})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeColor = 'custom-color'"
+										        :class="{ 'bg-gray-100': activeColor === 'custom-color' }"
+										        onclick="ripple.error('Oops! Something went wrong.', {colorful: true, backgroundColor: '#FFF0F0', color: '#E60000', borderColor: '#FFE0E1'})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Custom color
 										</button>
 									</li>
@@ -228,13 +299,16 @@
 
 							<div class="">
 								<div x-show.transition.in="activeColor === true" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆', {colorful: true})</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆', {colorful: true})</code></pre>
 								</div>
 								<div x-show.transition.in="activeColor === false" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.', {colorful: false})</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.', {colorful: false})</code></pre>
 								</div>
 								<div x-show.transition.in="activeColor === 'custom-config'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-xs leading-relaxed language-javascript">colorful: false,
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-xs leading-relaxed language-javascript">colorful: false,
 colors: {
     info: {
         backgroundColor: '#ECFDF3',
@@ -244,23 +318,35 @@ colors: {
 }</code></pre>
 								</div>
 								<div x-show.transition.in="activeColor === 'custom-color'" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.', {colorful: true, backgroundColor: '#FFF0F0', color: '#E60000', borderColor: '#FFE0E1'})</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.', {colorful: true, backgroundColor: '#FFF0F0', color: '#E60000', borderColor: '#FFE0E1'})</code></pre>
 								</div>
 							</div>
 						</div>
 
 						<div x-data="{ activeIcon: true }" class="">
 							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Icon</h2>
-							<p class="text-gray-600 text-sm leading-relaxed">If you don't want to show the icon, you can set it to <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">false</span>. Default is <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">true</span>.</p>
+							<p class="text-gray-600 text-sm leading-relaxed">If you don't want to show the icon, you can
+								set it to <span
+										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">false</span>.
+								Default is <span
+										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">true</span>.
+							</p>
 							<div class="">
 								<ul class="my-4 flex justify-start items-center gap-5">
 									<li>
-										<button @click="activeIcon = true" :class="{ 'bg-gray-100': activeIcon === true }" onclick="ripple.success('You have achieved your goal 🏆', {icon: true})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeIcon = true"
+										        :class="{ 'bg-gray-100': activeIcon === true }"
+										        onclick="ripple.success('You have achieved your goal 🏆', {icon: true})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Enabled
 										</button>
 									</li>
 									<li>
-										<button @click="activeIcon = false" :class="{ 'bg-gray-100': activeIcon === false }" onclick="ripple.error('Event has been created.', {icon: false})" class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+										<button @click="activeIcon = false"
+										        :class="{ 'bg-gray-100': activeIcon === false }"
+										        onclick="ripple.error('Event has been created.', {icon: false})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
 											Disabled
 										</button>
 									</li>
@@ -269,12 +355,147 @@ colors: {
 
 							<div class="">
 								<div x-show.transition.in="activeIcon === true" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆', {icon: true})</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆', {icon: true})</code></pre>
 								</div>
 								<div x-show.transition.in="activeIcon === false" class="code-block">
-									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.', {icon: false})</code></pre>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.', {icon: false})</code></pre>
 								</div>
 							</div>
+						</div>
+
+						<div x-data="{ progressBar: true }" class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Progress bar</h2>
+							<p class="text-gray-600 text-sm leading-relaxed">If you don't want to show the icon, you can
+								set it to <span
+										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">false</span>.
+								Default is <span
+										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">true</span>.
+							</p>
+							<div class="">
+								<ul class="my-4 flex justify-start items-center gap-5">
+									<li>
+										<button @click="progressBar = true"
+										        :class="{ 'bg-gray-100': progressBar === true }"
+										        onclick="ripple.success('You have achieved your goal 🏆', {progressBar: true})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Enabled
+										</button>
+									</li>
+									<li>
+										<button @click="progressBar = false"
+										        :class="{ 'bg-gray-100': progressBar === false }"
+										        onclick="ripple.error('Event has been created.', {progressBar: false})"
+										        class="bg-gray-50 border border-gray-200 shadow-sm text-gray-800 text-xs font-medium w-24 inline-block py-2 rounded-md text-center">
+											Disabled
+										</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="">
+								<div x-show.transition.in="progressBar === true" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.success('You have achieved your goal 🏆', {progressBar: true})</code></pre>
+								</div>
+								<div x-show.transition.in="progressBar === false" class="code-block">
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-sm leading-relaxed language-bash">ripple.error('Oops! Something went wrong.', {progressBar: false})</code></pre>
+								</div>
+							</div>
+						</div>
+
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Available options</h2>
+							<table class="table-auto w-full mt-2">
+								<thead>
+								<tr class="w-full text-gray-800 text-sm font-semibold leading-relaxed">
+									<th class="border border-gray-200 text-left px-4 py-2.5 w-32">Property</th>
+									<th class="border border-gray-200 text-left px-4 py-2.5">Description</th>
+									<th class="border border-gray-200 text-left px-4 py-2.5 w-28">Default</th>
+								</tr>
+								</thead>
+								<tbody class="text-gray-800 text-xs leading-relaxed">
+								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
+									<td class="border border-gray-200 text-left px-4 py-3">
+										types
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3">You can customize the type of toast you want to render
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">default</span>,
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">success</span>,
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">error</span>,
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">info</span>,
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">warning</span>
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3">
+										-
+									</td>
+								</tr>
+								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
+									<td class="border border-gray-200 text-left px-4 py-3">
+										position
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3">You can customize the position of the toastr.
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">top-left</span>,
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">top-center</span>,
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">top-right</span>,
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">bottom-left</span>,
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">bottom-center</span>,
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">bottom-right</span>
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3"><span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">bottom-right</span></td>
+								</tr>
+								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
+									<td class="border border-gray-200 text-left px-4 py-3">
+										colored
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3">If you want to show the colorful toastr, you can set it to <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">true</span></td>
+									<td class="border border-gray-200 text-left px-4 py-3"><span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">false</span></td>
+								</tr>
+								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
+									<td class="border border-gray-200 text-left px-4 py-3">
+										icon
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3">Icon displayed in start of toast's text.
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">true</span>,
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">false</span>
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3"><span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">true</span></td>
+								</tr>
+								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
+									<td class="border border-gray-200 text-left px-4 py-3">
+										progressbar
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3">Progressbar displayed relatively.
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">true</span>,
+										<span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">false</span>
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3"><span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">true</span></td>
+								</tr>
+								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
+									<td class="border border-gray-200 text-left px-4 py-3">
+										timeout
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3">Represents the time in milliseconds that the notification will be displayed.</td>
+									<td class="border border-gray-200 text-left px-4 py-3">3000ms</td>
+								</tr>
+								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
+									<td class="border border-gray-200 text-left px-4 py-3">
+										animationSpeed
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3">Animation speed of the notification</td>
+									<td class="border border-gray-200 text-left px-4 py-3">0.5s</td>
+								</tr>
+								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
+									<td class="border border-gray-200 text-left px-4 py-3">
+										duration
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3">It will disappear after the duration.</td>
+									<td class="border border-gray-200 text-left px-4 py-3">500ms</td>
+								</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>

@@ -18,6 +18,7 @@ export let RippleConfig;
         colorful: true,
         icon: true,
         position: 'bottom-right',
+        progressBar: true,
         colors: {
             success: {
                 backgroundColor: '#ECFDF3',
@@ -96,8 +97,18 @@ class RippleNotify {
         const toast = document.createElement('div');
         toast.className = `toast toast--${type}`;
 
-        const icon = document.createElement('i');
+        // Create progress bar
+        const progressBar = document.createElement('div');
+        const showProgressBar = options.hasOwnProperty('progressBar') ? options.progressBar : RippleConfig.progressBar;
 
+        if (showProgressBar) {
+            progressBar.className = 'toast-progress';
+            toast.appendChild(progressBar);
+            // progressBar.style.animation = `progressBar ${options.timeout || RippleConfig.timeout}ms linear`;
+            progressBar.style.backgroundColor = RippleConfig.colors[type].color;
+        }
+
+        const icon = document.createElement('i');
         const showIcon = options.hasOwnProperty('icon') ? options.icon : RippleConfig.icon;
 
         if (showIcon) {
@@ -136,33 +147,41 @@ class RippleNotify {
                 toast.style.top = '14px';
                 toast.style.left = '14px';
                 toast.style.animation = `slideInLeft ${toast.style.animationDuration} ease-in-out`;
+                // progressBar.classList.add('progress-right-to-left');
+                progressBar.style.animation = `progress-right-to-left-animation ${options.timeout || RippleConfig.timeout}ms linear forwards`;
                 break;
             case 'top-center':
                 toast.style.top = '14px';
                 toast.style.left = '50%';
                 toast.style.transform = 'translateX(-50%)';
                 toast.style.animation = `slideInTop ${toast.style.animationDuration} ease-in-out`;
+                progressBar.style.animation = `progress-right-to-left-animation ${options.timeout || RippleConfig.timeout}ms linear forwards`;
                 break;
             case 'top-right':
                 toast.style.top = '14px';
                 toast.style.right = '14px';
                 toast.style.animation = `slideInRight ${toast.style.animationDuration} ease-in-out`;
+                progressBar.style.animation = `progress-left-to-right-animation ${options.timeout || RippleConfig.timeout}ms linear forwards`;
                 break;
             case 'bottom-left':
                 toast.style.bottom = '14px';
                 toast.style.left = '14px';
                 toast.style.animation = `slideInLeft ${toast.style.animationDuration} ease-in-out`;
+                progressBar.style.animation = `progress-right-to-left-animation ${options.timeout || RippleConfig.timeout}ms linear forwards`;
                 break;
             case 'bottom-center':
                 toast.style.bottom = '14px';
                 toast.style.left = '50%';
                 toast.style.transform = 'translateX(-50%)';
                 toast.style.animation = `slideInBottom ${toast.style.animationDuration} ease-in-out`;
+                progressBar.style.animation = `progress-right-to-left-animation ${options.timeout || RippleConfig.timeout}ms linear forwards`;
                 break;
             case 'bottom-right':
                 toast.style.bottom = '14px';
                 toast.style.right = '14px';
                 toast.style.animation = `slideInRight ${toast.style.animationDuration} ease-in-out`;
+                progressBar.style.left = '0';
+                progressBar.style.animation = `progress-left-to-right-animation ${options.timeout || RippleConfig.timeout}ms linear forwards`;
                 break;
             default:
                 toast.style.top = '14px';

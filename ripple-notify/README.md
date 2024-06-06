@@ -2,13 +2,13 @@
 [![npm version](https://img.shields.io/npm/v/ripple-notify.svg?label=%E2%9B%B1npm&style=for-the-badge)](https://badge.fury.io/js/ripple-notify)
 ![License: ISC](https://img.shields.io/npm/l/ripple-notify.svg?label=%F0%9F%93%9Clicense&style=for-the-badge)
 [![Tweeting](https://img.shields.io/twitter/follow/codiify_ui?style=for-the-badge&logo=x)](https://x.com/codiify_ui)
-[![Support Server](https://img.shields.io/discord/1246870627537653860.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
+[![Support Server](https://img.shields.io/discord/1246870627537653860.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/YGdgQt6hJ9)
 
 
 
 
 
-RippleNotify is a sleek and efficient notification package designed to deliver subtle yet effective alerts across various digital platforms. Its intuitive design seamlessly integrates into web and mobile applications, providing unobtrusive notifications that capture user attention without disrupting workflow. Stay informed with RippleNotify's prompt and seamless communication.
+Ripple notify is a sleek and efficient notification package designed to deliver subtle yet effective alerts across various digital platforms. Its intuitive design seamlessly integrates into web and mobile applications, providing unobtrusive notifications that capture user attention without disrupting workflow. Stay informed with Ripple notify's prompt and seamless communication.
 
 ## Installation
 
@@ -98,7 +98,7 @@ Some of the options you can customize are:
 ## Documentation
 
 Provide details about the functions, classes, or methods exposed by your package. Include parameters, return values, and usage examples.
-Check the documentation to get you started with the package [here](https://mdrubelrana.github.io/ripple-notify/).
+Check the documentation to get you started with the package [here](https://codiify.github.io/ripple-notify/).
 
 ## Release Notes
 
@@ -111,6 +111,6 @@ This project is licensed under the ISC License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 ### Author
 [![Tweeting](https://img.shields.io/twitter/follow/rubel_codiify?style=for-the-badge&logo=x)](https://x.com/rubel_codiify)
-[![Support Server](https://img.shields.io/discord/1246870627537653860.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/vmr2FFzCKX)
+[![Support Server](https://img.shields.io/discord/1246870627537653860.svg?label=Discord&logo=Discord&colorB=4493f8&style=for-the-badge)](https://discord.gg/YGdgQt6hJ9)
 
 

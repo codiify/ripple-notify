@@ -1,7 +1,7 @@
 {
   "name": "ripple-notify",
-  "version": "1.0.1",
-  "description": "RippleNotify is a sleek and efficient notification package designed to deliver subtle yet effective alerts across various digital platforms. Its intuitive design seamlessly integrates into web and mobile applications, providing unobtrusive notifications that capture user attention without disrupting workflow. Stay informed with RippleNotify's prompt and seamless communication.",
+  "version": "1.2.0",
+  "description": "Efficient notification package designed to deliver subtle yet effective alerts across various digital platforms.",
   "main": "index.js",
   "scripts": {
     "test": "npm run ripple",
@@ -20,12 +20,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MdRubelRana/ripple-notify.git"
+    "url": "git+https://github.com/codiify/ripple-notify.git"
   },
   "author": "Md Rubel Rana",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MdRubelRana/ripple-notify/issues"
+    "url": "https://github.com/codiify/ripple-notify/issues"
   },
-  "homepage": "https://github.com/MdRubelRana/ripple-notify#readme"
+  "homepage": "https://github.com/codiify/ripple-notify#readme"
 }
