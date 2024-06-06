@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abfb47dc-e33a-4bb6-98e0-a057d5d7a5cd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/output/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ripple-notify/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ripple-notify/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ripple.js" beforeDir="false" afterPath="$PROJECT_DIR$/ripple.js" afterDir="false" />
-    </list>
+    <list default="true" id="abfb47dc-e33a-4bb6-98e0-a057d5d7a5cd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,6 +103,7 @@
       <workItem from="1717602608167" duration="1019000" />
       <workItem from="1717613690557" duration="3843000" />
       <workItem from="1717686648193" duration="6100000" />
+      <workItem from="1717695174512" duration="347000" />
     </task>
     <servers />
   </component>
