@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abfb47dc-e33a-4bb6-98e0-a057d5d7a5cd" name="Changes" comment="" />
+    <list default="true" id="abfb47dc-e33a-4bb6-98e0-a057d5d7a5cd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ripple-notify/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ripple-notify/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ripple-notify/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,28 +44,32 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.laravel-idea.search-composer-json&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;21.0.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.14.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/New folder/ripple-notify-packages/ripple-notify/package.json&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Postinstall Script.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.3.5\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.laravel-idea.search-composer-json": "true",
+    "git-widget-placeholder": "master",
+    "javascript.nodejs.core.library.configured.version": "21.0.0",
+    "javascript.nodejs.core.library.typings.version": "20.14.0",
+    "last_opened_file_path": "C:/laragon/www/packages/normal ripple/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Postinstall Script.executor": "Run",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.5\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\packages\normal ripple\assets" />
       <recent name="C:\laragon\www\New folder\ripple-notify-packages\assets\images" />
       <recent name="C:\laragon\www\New folder\ripple-notify-packages\website" />
       <recent name="C:\laragon\www\New folder\ripple-notify-packages\documentation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\packages\normal ripple\assets\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -103,7 +111,10 @@
       <workItem from="1717602608167" duration="1019000" />
       <workItem from="1717613690557" duration="3843000" />
       <workItem from="1717686648193" duration="6100000" />
-      <workItem from="1717695174512" duration="689000" />
+      <workItem from="1717695174512" duration="1817000" />
+      <workItem from="1717729169691" duration="6605000" />
+      <workItem from="1717748729782" duration="594000" />
+      <workItem from="1717775315379" duration="2895000" />
     </task>
     <servers />
   </component>

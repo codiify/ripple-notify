@@ -12,38 +12,43 @@ export let RippleConfig;
 (async () => {
     // Default configuration
     RippleConfig = {
-        timeout: 3000,
         animationSpeed: '0.5s',
-        duration: 500,
         colorful: true,
+        duration: 500,
         icon: true,
         position: 'bottom-right',
         progressBar: true,
+        timeout: 3000,
         colors: {
             success: {
                 backgroundColor: '#ECFDF3',
                 color: '#008A2E',
-                borderColor: '#D3FDE5'
+                borderColor: '#D3FDE5',
+                progressBarColor: '#008A2E',
             },
             error: {
                 backgroundColor: '#FFF0F0',
                 color: '#E60000',
-                borderColor: '#FFE0E1'
+                borderColor: '#FFE0E1',
+                progressBarColor: '#E60000',
             },
             info: {
                 backgroundColor: '#F0F8FF',
                 color: '#0973DC',
-                borderColor: '#D3E0FD'
+                borderColor: '#D3E0FD',
+                progressBarColor: '#0973DC',
             },
             warning: {
                 backgroundColor: '#FFFCF0',
                 color: '#DC7609',
-                borderColor: '#FDF5D3'
+                borderColor: '#FDF5D3',
+                progressBarColor: '#DC7609',
             },
             default: {
                 backgroundColor: '#FFFFFF',
                 color: '#171717',
-                borderColor: '#EDEDED'
+                borderColor: '#EDEDED',
+                progressBarColor: '#171717',
             }
         }
     };
@@ -104,8 +109,8 @@ class RippleNotify {
         if (showProgressBar) {
             progressBar.className = 'toast-progress';
             toast.appendChild(progressBar);
-            // progressBar.style.animation = `progressBar ${options.timeout || RippleConfig.timeout}ms linear`;
-            progressBar.style.backgroundColor = RippleConfig.colors[type].color;
+            // progressBar.style.backgroundColor = RippleConfig.colors[type].color;
+            progressBar.style.backgroundColor = options.progressBarColor || (RippleConfig.colors[type] ? RippleConfig.colors[type].progressBarColor : RippleConfig.progressBarColor);
         }
 
         const icon = document.createElement('i');
@@ -202,13 +207,51 @@ class RippleNotify {
             toast.style.borderColor = options.borderColor || defaultColorConfig.borderColor;
         }
 
+        // Add click event listener to remove toast
+        toast.addEventListener('click', () => {
+            stopProgress();
+            toast.style.opacity = '0';
+            setTimeout(() => {
+                toast.remove();
+            }, 200);
+        });
+
         document.body.appendChild(toast);
 
-        setTimeout(() => {
-            toast.style.transition = 'opacity 2s ease';
-            toast.style.opacity = '0';
-            setTimeout(() => toast.remove(), options.duration || RippleConfig.duration);
-        }, options.timeout || RippleConfig.timeout);
+        // Handle hover to pause the progress bar
+        let timeoutId;
+        const timeout = options.timeout || RippleConfig.timeout;
+
+        let startTime;
+        let remainingTime = timeout;
+
+        const startProgress = () => {
+            startTime = Date.now();
+            progressBar.style.animation = `progress ${remainingTime}ms linear forwards`;
+            timeoutId = setTimeout(() => {
+                toast.remove();
+            }, remainingTime);
+        };
+
+        const stopProgress = () => {
+            clearTimeout(timeoutId);
+            const elapsedTime = Date.now() - startTime;
+            remainingTime -= elapsedTime;
+            progressBar.style.animationPlayState = 'paused';
+        };
+
+        const resumeProgress = () => {
+            startTime = Date.now();
+            progressBar.style.animationPlayState = 'running';
+            timeoutId = setTimeout(() => {
+                toast.remove();
+            }, remainingTime);
+        };
+
+        startProgress();
+
+        toast.addEventListener('mouseover', stopProgress);
+        toast.addEventListener('mouseout', resumeProgress);
     }
 }
 
