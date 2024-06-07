@@ -14,7 +14,11 @@
     border: 1px solid;
     border-radius: 6px;
     padding: 16px 12px;
+    transition: opacity 0.3s ease;
 }
+/*.toast.toast--hide {*/
+/*    opacity: 0;*/
+/*}*/
 
 .toast-icon {
     font-size: 14px;
@@ -98,5 +102,14 @@
     to {
         bottom: 14px;
         opacity: 1;
+    }
+}
+
+@keyframes progress {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
     }
 }
