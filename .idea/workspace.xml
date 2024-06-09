@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abfb47dc-e33a-4bb6-98e0-a057d5d7a5cd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ripple-notify/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-notify/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ripple-test/ripple.js" beforeDir="false" afterPath="$PROJECT_DIR$/ripple-test/ripple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-laravel/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/test-laravel/resources/js/app.js" afterDir="false" />
-    </list>
+    <list default="true" id="abfb47dc-e33a-4bb6-98e0-a057d5d7a5cd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +68,11 @@
       <recent name="C:\laragon\www\packages\normal ripple\assets\images" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.Postinstall Script">
+    <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner configuration_file="$PROJECT_DIR$/test-laravel/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
     <configuration name="Postinstall Script" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/ripple-notify/package.json" />
       <command value="install" />
@@ -122,7 +119,7 @@
       <workItem from="1717861971448" duration="118000" />
       <workItem from="1717871332215" duration="3839000" />
       <workItem from="1717943261328" duration="338000" />
-      <workItem from="1717944116858" duration="8963000" />
+      <workItem from="1717944116858" duration="9250000" />
     </task>
     <servers />
   </component>
