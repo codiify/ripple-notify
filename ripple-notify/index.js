@@ -53,7 +53,7 @@ export let RippleConfig;
         }
     };
 
-    // console.log('Using default configuration:', RippleConfig);
+    console.log('Using default configuration:', RippleConfig);
 
     // Specify the custom config path
     const customConfigPath = '../../ripple.js'; // Adjust the path as needed
@@ -71,9 +71,9 @@ export let RippleConfig;
                 ...customConfigModule.RippleConfig.colors // Override with custom colors
             },
         };
-        // console.log('Custom configuration loaded:', customConfigModule.RippleConfig);
+        console.log('Custom configuration loaded:', customConfigModule.RippleConfig);
     } catch (e) {
-        // console.warn(`Custom configuration file not found at ${customConfigPath}. Using default configuration.`);
+        console.warn(`Custom configuration file not found at ${customConfigPath}. Using default configuration.`);
     }
 })();
 
@@ -100,14 +100,14 @@ class RippleNotify {
 
     static createToast(type = 'default', message, options = {}) {
         const toast = document.createElement('div');
-        toast.className = `toast toast--${type}`;
+        toast.className = `ripple ripple--${type}`;
 
         // Create progress bar
         const progressBar = document.createElement('div');
         const showProgressBar = options.hasOwnProperty('progressBar') ? options.progressBar : RippleConfig.progressBar;
 
         if (showProgressBar) {
-            progressBar.className = 'toast-progress';
+            progressBar.className = 'ripple-progress';
             toast.appendChild(progressBar);
             // progressBar.style.backgroundColor = RippleConfig.colors[type].color;
             progressBar.style.backgroundColor = options.progressBarColor || (RippleConfig.colors[type] ? RippleConfig.colors[type].progressBarColor : RippleConfig.progressBarColor);
@@ -117,7 +117,7 @@ class RippleNotify {
         const showIcon = options.hasOwnProperty('icon') ? options.icon : RippleConfig.icon;
 
         if (showIcon) {
-            icon.className = `toast-icon`;
+            icon.className = `ripple-icon`;
             switch (type) {
                 case 'success':
                     icon.classList.add('fas', 'fa-check-circle');

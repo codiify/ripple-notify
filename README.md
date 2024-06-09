@@ -120,7 +120,7 @@ Check the documentation to get you started with the package [here](https://codii
 
 ## Release Notes
 
-You can find the release note for the latest release [here](https://www.npmjs.com/package/@codiify/ripple-notify?activeTab=versions).
+You can find the release note for the latest release [here](https://www.npmjs.com/package/ripple-notify?activeTab=versions).
 
 ## License
 
