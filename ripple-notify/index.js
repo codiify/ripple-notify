@@ -77,6 +77,14 @@ export let RippleConfig;
     }
 })();
 
+
+function loadFontAwesome() {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
+    document.head.appendChild(link);
+}
+
 class RippleNotify {
     static success(message = 'This is a success message!', options = {}) {
         this.createToast('success', message, options);
@@ -254,6 +262,9 @@ class RippleNotify {
         toast.addEventListener('mouseout', resumeProgress);
     }
 }
+
+// Load Font Awesome when the script is loaded
+loadFontAwesome();
 
 window.RippleNotify = RippleNotify;
 

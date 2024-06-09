@@ -1,3 +1,4 @@
+
 export const RippleConfig = {
     animationSpeed: '0.5s',
     colorful: true,
