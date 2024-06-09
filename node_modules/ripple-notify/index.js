@@ -56,7 +56,7 @@ export let RippleConfig;
     // console.log('Using default configuration:', RippleConfig);
 
     // Specify the custom config path
-    const customConfigPath = '../../ripple.js'; // Adjust the path as needed
+    const customConfigPath = '/../ripple.js'; // Adjust the path as needed
 
     try {
         // Try to import the custom config file
@@ -76,6 +76,14 @@ export let RippleConfig;
         // console.warn(`Custom configuration file not found at ${customConfigPath}. Using default configuration.`);
     }
 })();
+
+
+function loadFontAwesome() {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
+    document.head.appendChild(link);
+}
 
 class RippleNotify {
     static success(message = 'This is a success message!', options = {}) {
@@ -100,14 +108,14 @@ class RippleNotify {
 
     static createToast(type = 'default', message, options = {}) {
         const toast = document.createElement('div');
-        toast.className = `toast toast--${type}`;
+        toast.className = `ripple ripple--${type}`;
 
         // Create progress bar
         const progressBar = document.createElement('div');
         const showProgressBar = options.hasOwnProperty('progressBar') ? options.progressBar : RippleConfig.progressBar;
 
         if (showProgressBar) {
-            progressBar.className = 'toast-progress';
+            progressBar.className = 'ripple-progress';
             toast.appendChild(progressBar);
             // progressBar.style.backgroundColor = RippleConfig.colors[type].color;
             progressBar.style.backgroundColor = options.progressBarColor || (RippleConfig.colors[type] ? RippleConfig.colors[type].progressBarColor : RippleConfig.progressBarColor);
@@ -117,7 +125,7 @@ class RippleNotify {
         const showIcon = options.hasOwnProperty('icon') ? options.icon : RippleConfig.icon;
 
         if (showIcon) {
-            icon.className = `toast-icon`;
+            icon.className = `ripple-icon`;
             switch (type) {
                 case 'success':
                     icon.classList.add('fas', 'fa-check-circle');
@@ -254,6 +262,9 @@ class RippleNotify {
         toast.addEventListener('mouseout', resumeProgress);
     }
 }
+
+// Load Font Awesome when the script is loaded
+loadFontAwesome();
 
 window.RippleNotify = RippleNotify;
 

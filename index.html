@@ -8,7 +8,6 @@
 	<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 	<title>Ripple Notify - A simple and lightweight toastr library</title>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 	<link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet">
 	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -41,61 +40,6 @@
 							<p class="">
 							<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
 									class="!text-gray-600 !text-sm leading-relaxed language-bash">npm i ripple-notify</code></pre>
-							</p>
-						</div>
-
-						<div class="">
-							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Usage</h2>
-							<p class="text-gray-600 text-sm leading-6">You need a <span
-									class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">ripple.js</span>
-								to your project <span
-										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">root</span>
-								folder to customize the toastr globally. File name must be <span
-										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">ripple.js</span>
-								and the content should be like below:</p>
-							<p class="">
-							<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
-									class="!text-gray-600 !text-xs leading-relaxed language-javascript">export const RippleConfig = {
-    animationSpeed: '0.5s',
-    colorful: true,
-    duration: 500,
-    icon: true,
-    position: 'bottom-right',
-    progressBar: true,
-    timeout: 3000,
-    colors: {
-        success: {
-            backgroundColor: '#ECFDF3',
-            color: '#008A2E',
-            borderColor: '#D3FDE5',
-            progressBarColor: '#008A2E',
-        },
-        error: {
-            backgroundColor: '#FFF0F0',
-            color: '#E60000',
-            borderColor: '#FFE0E1',
-            progressBarColor: '#E60000',
-        },
-        info: {
-            backgroundColor: '#F0F8FF',
-            color: '#0973DC',
-            borderColor: '#D3E0FD',
-            progressBarColor: '#0973DC',
-        },
-        warning: {
-            backgroundColor: '#FFFCF0',
-            color: '#DC7609',
-            borderColor: '#FDF5D3',
-            progressBarColor: '#DC7609',
-        },
-        default: {
-            backgroundColor: '#FFFFFF',
-            color: '#171717',
-            borderColor: '#EDEDED',
-            progressBarColor: '#171717',
-        }
-    }
-};</code></pre>
 							</p>
 						</div>
 
@@ -172,6 +116,117 @@
 								</div>
 							</div>
 						</div>
+
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Usage</h2>
+							<p class="text-gray-600 text-sm leading-6">You need a <span
+									class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">ripple.js</span>
+								to your project <span
+										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">root</span>
+								folder to customize the toastr globally. File name must be <span
+										class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">ripple.js</span>
+								and the content should be like below:</p>
+							<p class="">
+							<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+									class="!text-gray-600 !text-xs leading-relaxed language-javascript">export const RippleConfig = {
+    animationSpeed: '0.5s',
+    colorful: true,
+    duration: 500,
+    icon: true,
+    position: 'bottom-right',
+    progressBar: true,
+    timeout: 3000,
+    colors: {
+        success: {
+            backgroundColor: '#ECFDF3',
+            color: '#008A2E',
+            borderColor: '#D3FDE5',
+            progressBarColor: '#008A2E',
+        },
+        error: {
+            backgroundColor: '#FFF0F0',
+            color: '#E60000',
+            borderColor: '#FFE0E1',
+            progressBarColor: '#E60000',
+        },
+        info: {
+            backgroundColor: '#F0F8FF',
+            color: '#0973DC',
+            borderColor: '#D3E0FD',
+            progressBarColor: '#0973DC',
+        },
+        warning: {
+            backgroundColor: '#FFFCF0',
+            color: '#DC7609',
+            borderColor: '#FDF5D3',
+            progressBarColor: '#DC7609',
+        },
+        default: {
+            backgroundColor: '#FFFFFF',
+            color: '#171717',
+            borderColor: '#EDEDED',
+            progressBarColor: '#171717',
+        }
+    }
+};</code></pre>
+							</p>
+						</div>
+
+
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Laravel</h2>
+							<p class="text-gray-600 text-sm leading-relaxed">To use in laravel based project, you need to include below code in your <span
+									class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">resources/app.js</span> file.</p>
+							<div class="">
+								<div class="">
+									<p>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-xs leading-relaxed language-javascript">import RippleNotify  from 'ripple-notify';
+const ripple = RippleNotify;
+window.ripple = ripple;</code></pre>
+									</p>
+								</div>
+							</div>
+							<p class="text-gray-600 text-sm leading-relaxed mt-5">And then add the below code in your <span
+									class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">resources/app.css</span> file.</p>
+							<div class="">
+								<div class="">
+									<p>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-xs leading-relaxed language-javascript">@import "ripple-notify/styles.css";</code></pre>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">HTML based</h2>
+							<p class="text-gray-600 text-sm leading-relaxed">For normal <span
+									class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">html</span> usage, you need to include the <span
+									class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">styles.css</span> file in your project.</p>
+							<div class="">
+								<div class="">
+									<p>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-xs leading-relaxed language-html">&lt;link rel="stylesheet" href="node_modules/ripple-notify/styles.css"&gt;</code></pre>
+									</p>
+								</div>
+							</div>
+							<p class="text-gray-600 text-sm leading-relaxed mt-5">Initialize the <span
+									class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-5">ripple</span> in your project.</p>
+							<div class="">
+								<div class="">
+									<p>
+									<pre class="rounded-lg !bg-gray-50 border border-gray-100"><code
+											class="!text-gray-600 !text-xs leading-relaxed language-javascript"><script type="module">import RippleNotify from './node_modules/ripple-notify/index.js';
+const ripple = RippleNotify;
+window.ripple = ripple;
+</script></code></pre>
+									</p>
+								</div>
+							</div>
+						</div>
+
 
 						<div x-data="{ activePosition: 'top-left' }" class="">
 							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Position</h2>
@@ -544,8 +599,32 @@ colors: {
 									<td class="border border-gray-200 text-left px-4 py-3">It will disappear after the duration.</td>
 									<td class="border border-gray-200 text-left px-4 py-3">500ms</td>
 								</tr>
+								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
+									<td class="border border-gray-200 text-left px-4 py-3">
+										onHover
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3">When the <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">mouse enters</span> hover, it will stop, on the <span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">mouse leaves</span> it will start again.</td>
+									<td class="border border-gray-200 text-left px-4 py-3">-</td>
+								</tr>
+								<tr class="border border-gray-200 even:bg-transparent odd:bg-gray-100">
+									<td class="border border-gray-200 text-left px-4 py-3">
+										onClick
+									</td>
+									<td class="border border-gray-200 text-left px-4 py-3"><span class="font-medium italic bg-gray-200 px-1 rounded py-0 inline-block leading-4">On click</span> on the toaster, and it will be removed immediately.</td>
+									<td class="border border-gray-200 text-left px-4 py-3">-</td>
+								</tr>
 								</tbody>
 							</table>
+						</div>
+
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Release notes</h2>
+							<p class="text-gray-600 text-sm leading-relaxed">You can find the release note for the latest release <a href="https://www.npmjs.com/package/ripple-notify?activeTab=versions" target="_blank" class="text-blue-600">here</a>.</p>
+						</div>
+
+						<div class="">
+							<h2 class="text-gray-800 text-base font-bold leading-relaxed">Contributors</h2>
+							<p class="text-gray-600 text-sm leading-relaxed">Find me on github <a href="https://github.com/MdRubelRana" target="_blank" class="text-blue-600">@Md Rubel Rana</a></p>
 						</div>
 					</div>
 				</div>

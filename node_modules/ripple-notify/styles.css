@@ -1,32 +1,29 @@
 /* styles.css */
-.toast {
+.ripple {
     position: relative;
     width: 316px;
     display: flex;
     align-items: start;
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
-    color: #fff;
+    color: #FFFFFF;
     font-family: Arial, sans-serif;
-    z-index: 1000;
     font-size: 13px;
     font-weight: 600;
     border: 1px solid;
     border-radius: 6px;
     padding: 16px 12px;
     transition: opacity 0.3s ease;
+    z-index: 9999999999;
 }
-/*.toast.toast--hide {*/
-/*    opacity: 0;*/
-/*}*/
 
-.toast-icon {
+.ripple-icon {
     font-size: 14px;
     margin-right: 8px;
     margin-top: 2px;
 }
 
-.toast-progress {
+.ripple-progress {
     position: absolute;
     bottom: 0;
     left: 0;

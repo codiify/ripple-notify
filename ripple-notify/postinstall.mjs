@@ -56,7 +56,7 @@ export const RippleConfig = {
 
 try {
     await fs.writeFile(filePath, fileContent);
-    // console.log('ripple.js file created successfully.');
+    console.log('ripple.js file created successfully.');
 } catch (err) {
-    // console.error('Failed to create ripple.js file:', err);
+    console.error('Failed to create ripple.js file:', err);
 }

@@ -90,19 +90,34 @@ Some of the options you can customize are:
 - `progressBar`: Progressbar displayed relatively `true`, `false`.
 ####
 - `progressBarColor`: You can customize the progress bar color.
+####
+- `onHover`: When the `mouse enters` hover, it will stop, on the `mouse leaves` it will start again.
+####
+- `onClick`: `On click` on the toaster, and it will be removed immediately.
 #
 
+### Laravel Usage
+To use in laravel based project, you need to include below code in your `resources/app.js` file.
+```javascript
+import RippleNotify  from 'ripple-notify';
+
+const ripple = RippleNotify;
+
+window.ripple = ripple;
+```
+####
+And then add the below code in your `resources/app.css` file.
+```css
+@import "ripple-notify/styles.css";
+```
+##
+### HTML Usage
+For normal `html` usage, you need to include the `styles.css` file in your project.
 ```html
 <link rel="stylesheet" href="node_modules/ripple-notify/styles.css">
 ```
-###
-Also, you need font awesome for the icons.
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-```
-
-###
-Initialize the ripple in your project.
+####
+Initialize the `ripple` in your project.
 ```javascript
 <script type="module">
     import RippleNotify from './node_modules/ripple-notify/index.js';
@@ -120,7 +135,7 @@ Check the documentation to get you started with the package [here](https://codii
 
 ## Release Notes
 
-You can find the release note for the latest release [here](https://www.npmjs.com/package/@codiify/ripple-notify?activeTab=versions).
+You can find the release note for the latest release [here](https://www.npmjs.com/package/ripple-notify?activeTab=versions).
 
 ## License
 
