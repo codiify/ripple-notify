@@ -53,10 +53,10 @@ export let RippleConfig;
         }
     };
 
-    console.log('Using default configuration:', RippleConfig);
+    // console.log('Using default configuration:', RippleConfig);
 
     // Specify the custom config path
-    const customConfigPath = '../../ripple.js'; // Adjust the path as needed
+    const customConfigPath = '/../ripple.js'; // Adjust the path as needed
 
     try {
         // Try to import the custom config file
@@ -71,9 +71,9 @@ export let RippleConfig;
                 ...customConfigModule.RippleConfig.colors // Override with custom colors
             },
         };
-        console.log('Custom configuration loaded:', customConfigModule.RippleConfig);
+        // console.log('Custom configuration loaded:', customConfigModule.RippleConfig);
     } catch (e) {
-        console.warn(`Custom configuration file not found at ${customConfigPath}. Using default configuration.`);
+        // console.warn(`Custom configuration file not found at ${customConfigPath}. Using default configuration.`);
     }
 })();
 
